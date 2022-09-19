@@ -32,5 +32,7 @@ window.addEventListener('load',function(){
      }
     //  把ol里面的第一个小li添加一个class类
     ol.children[0].className='current'; 
-    
+    arrow_r.addEventListener('click',function(){
+        alert(1)
+    })
 })

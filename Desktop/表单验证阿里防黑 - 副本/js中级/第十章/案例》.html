@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        每次向现有DOM元素div1添加新创建得p，就会刷DOM一次
+        解决方案：在内存中新建一个空的DIV,每次循环都向内存中得这个添加在内存
+        新建的p，不会依法DOM重绘，因为这个div，没有在现有dom中渲染
+        最后在一次性将新建的div添加到div1上，只引发一次DOM重绘
+        缺点：改变了dom结构 会引发一些列问题
+
+        最终解决方案 ：文档碎片
+         文档碎片相当于一个空的div，但是挂载到现有的dom结构中 ，不会被渲染
+     -->
+     <div id="div1">
+        
+     </div>
+     <input type="button" id="btn">
+</body>
+<script>
+ var div1 = document.querySelector('#div1')
+ var btn = document.querySelector('#btn')
+//  btn.onclick = function(){
+//     var div = document.createElement('p');
+//     for(var i = 0 ; i<=10;i++){
+//         var p = document.createElement('div');
+//         p.innerText = 'p'+i+'标记';
+//         div.appendChild(p)
+//     }
+//     div1.appendChild(div)
+//  }
+ btn.onclick = function(){
+    // 创建一个文档碎片
+var flagment = document.createDocumentFragment('div')
+var div1 = document.querySelector('#div1')
+for(var i =0;i<=10;i++){
+    var p = document.createElement('p')
+    p.innerText = 'p'+i + '标签';
+    flagment.appendChild(p);
+}
+div1.appendChild(flagment)
+ }
+</script>
+</html>

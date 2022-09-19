@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #login {
+        width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      #center,
+      #strong,
+      #weak {
+        width: 30px;
+        height: 20px;
+        display: inline-block;
+      }
+      #weak {
+        background-color: #f00;
+        display: none;
+      }
+      #center {
+        background-color: #00f;
+        display: none;
+      }
+      #strong {
+        background-color: #0f0;
+        display: none;
+      }
+      #inpTexts {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login">
+      <input type="text" id="inp" />
+      <div id="inpText">
+        请输入6-16位密码区分大小写
+        <span id="weak">弱</span>
+        <span id="center">中</span>
+        <span id="strong">强</span>
+      </div>
+      <div id="inpTexts">输入的密码不正确应为6-16位密码区分大小写</div>
+    </div>
+  </body>
+  <script>
+    function $(_id) {
+      return document.getElementById(_id);
+    }
+    var inp = $("inp");
+    var inpText = $("inpText");
+    var weak = $("weak");
+    var center = $("center");
+    var strong = $("strong");
+    var inpTexts = $("inpTexts");
+    var regStr = /[a-zA-Z]/;
+    var regNum = /[0-9]/;
+    var fStrNum = /\W/; //所有非字母
+    inp.addEventListener("keyup", function () {
+      if (inp.value.length <= 16) {
+        inpTexts.style.display = "none";
+        if (
+          (inp.value.length >= 6 && regStr.test(inp.value)) ||
+          (inp.value.length >= 6 && regNum.test(inp.value)) ||
+          (inp.value.length >= 6 && fStrNum.test(inp.value))
+        ) {
+          weak.style.display = "inline-block";
+          inpText.style.display = "block";
+          strong.style.display = "none";
+          center.style.display = "none";
+        } else if (inp.value.length < 6) {
+          inpText.style.display = "none";
+          inpTexts.style.display = "block";
+          weak.style.display = "none";
+        }
+        if (inp.value.length == 0) {
+          inpText.style.display = "block";
+          inpTexts.style.display = "none";
+          weak.style.display = "none";
+          center.style.display = "none";
+          strong.style.display = "none";
+        }
+        if (
+          inp.value.length >= 6 &&
+          regStr.test(inp.value) &&
+          regNum.test(inp.value)
+        ) {
+          center.style.display = "inline-block";
+          weak.style.display = "none";
+          strong.style.display = "none";
+        } else if (
+          inp.value.length >= 6 &&
+          regStr.test(inp.value) &&
+          fStrNum.test(inp.value)
+        ) {
+          center.style.display = "inline-block";
+          weak.style.display = "none";
+          strong.style.display = "none";
+        } else if (
+          inp.value.length >= 6 &&
+          regNum.test(inp.value) &&
+          fStrNum.test(inp.value)
+        ) {
+          center.style.display = "inline-block";
+          weak.style.display = "none";
+          strong.style.display = "none";
+        }
+        if (
+          inp.value.length >= 6 &&
+          regNum.test(inp.value) &&
+          fStrNum.test(inp.value) &&
+          regStr.test(inp.value)
+        ) {
+          center.style.display = "none";
+          weak.style.display = "none";
+          strong.style.display = "inline-block";
+        }
+      }
+      if(inp.value.length >16){
+        inpTexts.style.display= 'block';
+        inpText.style.display= 'none';
+      }
+    });
+  </script>
+</html>

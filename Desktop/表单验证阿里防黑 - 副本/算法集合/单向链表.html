@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+//    封装链表类
+ function LinkedList(){
+    // 内部的类 节点类
+    function Node(data){
+    this.data=data;
+    this.next = null;
+    }
+    // 属性
+    this.head = null;
+    this.length = 0;
+
+    // 追加方法
+    LinkedList.prototype.append = function(data){
+        // 创建新的节点
+        var newNode = new Node(data)
+        // 判断是否添加的是第一个节点
+        if(this.length == 0){ // 是第一个节点
+            console.log(this);
+            this.head = newNode;
+            console.log(this);
+        }else{ // 不是第一个节点
+       
+        //  声明一个变量 this.head 指向的是第一个节点 就将第一个节点给了current
+         var current = this.head;
+         while(current.next){
+            current = current.next;
+         }
+        //  最后节点的next指向新的节点
+    current.next= newNode;
+    }
+        this.length += 1;
+    }
+
+    // toString
+    LinkedList.prototype.toString = function(){
+        var current = this.head;
+        var linkString = '';
+        while(current){
+            linkString += current.data + '';
+            current = current.next;
+        }
+        return linkString;
+    }
+ }
+ var arr = new LinkedList();
+ arr.append('fg')
+ arr.append('fg')
+ arr.append('fg')
+ alert(arr)
+
+ function LinkedList(data){
+   function Node(){
+    this.data = data;
+    this.next = null;
+   }
+   this.data = data;
+   this.length=0
+ }
+</script>
+</html>

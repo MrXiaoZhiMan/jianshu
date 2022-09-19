@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // 没有返回值的函数
+        // function a(x,y){
+        //     alert(x+y)
+        // }
+
+        // function b(x,y){
+        //     alert(x+y)
+        // }
+        // alert(a===b);//不全等因为函数首地址不同
+        // alert(a(1,2)===b(2,3))  //全等因为没有返回值 return 返回的是undefined
+
+        // // 函数加括号是看函数的返回值相不相等  不加括号是看函数 首地址相不相等
+
+        // 带返回值的函数
+        function add(x,y){
+            var z = 10;
+            return x+y+z;  // 结束函数 后面的语句不执行
+            alert(x+y+z+10);
+        }
+        console.log(add(1,2)); // 函数名带括号 会被return返回值替换 或者是undefined
+        
+    </script>
+</head>
+<body>
+</body>s
+</html>

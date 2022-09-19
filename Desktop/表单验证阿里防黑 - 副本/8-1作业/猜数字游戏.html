@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var a = Math.floor(Math.random() * 1000) % 101;
+        // console.log(a);
+        do {
+            var sr = prompt("输入一个1-100数字", "");
+          
+            if (sr < a) {
+                console.log("输入的数过小");
+
+            }
+            if (sr > a) {
+                console.log("输入的数过大");
+            }
+            if (sr == null || sr == a) {
+                break;
+            }
+        } while (true)
+
+        if (sr == a) {
+            alert("输入正确");
+        }
+        if (sr == null) {
+            alert("放弃输入");
+        }
+        // do while 循环会执行一次后再进行判断 while循环会先进行判断在看是否循环
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

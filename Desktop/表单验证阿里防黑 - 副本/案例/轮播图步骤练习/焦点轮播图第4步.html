@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        /*初始化*/
+        padding: 0;
+        margin: 0;
+        /*把所有元素内外边距和列表样式去掉*/
+        text-decoration: none;
+        list-style: none;
+
+    }
+    #banner{
+        width: 800px;
+        height: 400px;
+        border: 1px solid #999;
+        /*超出框外的图片隐藏，或者说溢出边框的图片隐藏*/
+        overflow: hidden;
+        position: relative;
+    }
+    /*列表4个图的宽*/
+    #imglist{
+        /*4个图的总宽度*/
+        /*width: 3200px;*/
+        /*3200会有空白，改为4000*/
+        width: 4000px;
+        /*每个图都是高400px*/
+        height: 400px;
+    }
+    #imglist img{
+        width: 800px;
+        height: 400px;
+    }
+    #imglist li{
+        /*列表元素li左浮动,图片横排*/
+        float: left;
+    }
+    .prev{
+        background: #666;
+        width: 30px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        line-height: 40px;
+        position: absolute;
+        left: 5px;
+        top: 45%;
+        cursor: pointer;
+    }
+    .next{
+        background: #666;
+        width: 30px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        line-height: 40px;
+        position: absolute;
+        right: 5px;
+        top: 45%;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div id="banner">
+        <ul id="imglist">
+            <li><img src="./img/1.jpg" alt=""></li>
+            <li><img src="./img/2.jpeg" alt=""></li>
+            <li><img src="./img/3.jpg" alt=""></li>
+            <li><img src="./img/4.jpg" alt=""></li>
+            <!--再添加一张1.png是添加到空白的位置 -->
+            <li><img src="./img/1.jpg" alt=""></li>
+        </ul>
+        <!--做出两个div当做按钮,先暂时把隐藏取消-->
+        <div class="prev" onclick="prev()"><</div>
+        <div class="next">></div>
+    </div>
+         
+    <script>
+       //获取2个按钮元素
+         var prev=document.querySelector('.prev');
+         var next=document.querySelector('.next');
+        //第2步定时器实现简单轮播效果
+        //1.首先我们先创建一个移动变量left,一个定时器timer
+        var left=0;
+        var timer;
+        //2.做滚动函数run,通过样式marginleft进行移动
+        run();//测试测试
+        function run(){
+            imglist.style.marginLeft=left+'px';
+            //每10毫秒运行一次run,每次偏移left累积-10
+            //left =left-10;
+            timer=setTimeout(run,10);
+            
+            //如果滚动完，重新开始,重置left值
+            if(left<= -3200){
+               left=0;
+            }
+            //添加变量n,滚完一张图停1200毫秒
+            var n=(left % 800 == 0) ? n=1200 : n=10;
+        }
+        
+         //4.做一个可以定位到指定图片的函数imgchange
+         function imgchange(n){
+            //完成定位时记得修改left值
+            let lt= -(n*800);
+            imglist.style.marginLeft=lt+ 'px';
+            left=lt;
+         }
+          prev.onclick=function(){
+            //通过获取当前的位置，减去1，就是上一张
+            let prevgo=Math.floor(-left/800) -1;
+            //第一张没有前一张，所以第一章往前的一张是第四张
+            if(prevgo==-1){
+                prevgo =3;
+            }
+            imgchange(prevgo)
+         }
+         next.onclick=function(){
+            //通过获取当前的位置，加上1，就是后一张
+            let nextgo=Math.floor(-left/800) +1;
+            //如果第四张没有后一张，所以第四章往后的一张是第一张
+            if(nextgo==4){
+                nextgo=0;
+            }
+            imgchange(nextgo);
+         }
+    </script>
+</body>
+</html>

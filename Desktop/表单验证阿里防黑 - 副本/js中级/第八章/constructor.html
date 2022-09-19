@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+    function test(){}
+    test.prototype  //里面有个{constructor：f}
+    test.prototype.constructor===test // 是true 
+    // 他指向函数对像本身
+    // __proto__ 在ie 6-10中是私有的所以 s1.__proto__是获取不到的 
+    // 但是可以用s1.constructor 获取到函数  函数里面有 prototype 然后.方法就可以获取到这个方法 
+    // s1.constructor.prototype
+</script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navImg {
+            width: 1300px;
+            height: 62px;
+            background: url(img/logo.jpg) no-repeat;
+        }
+
+        .navImg:after {
+            content: '';
+            display: block;
+            clear: left;
+        }
+
+        .navImg img {
+            float: left;
+        }
+
+        .navImg ul {
+            padding-left: 550px;
+        }
+
+        .navImg ul li {
+            float: left;
+            list-style: none;
+            padding: 0 30px;
+        }
+
+        .borderBottom {
+            height: 62px;
+            width: 998px;
+            margin-left: 350px;
+            box-sizing: border-box;
+            border-bottom: 13px solid #09f;
+        }
+
+        .brief {
+            width: 158px;
+        }
+
+        .brief li {
+            height: 22px;
+            line-height: 22px;
+            border-bottom: 1px solid #fff;
+            padding: 0 16px;
+            font-size: 12px;
+            color: #fff;
+            background: rgb(149, 176, 202) url(img/icon1.gif) no-repeat 8px 10px;
+        }
+
+        .brief li:nth-child(1) {
+            border-top: 5px solid rgb(103, 165, 173);
+        }
+
+        .searche {
+            margin: 15px 0;
+            width: 158px;
+            font-size: 12px;
+        }
+
+        .inp {
+            width: 70px;
+        }
+
+        .contentLeft {
+            float: left;
+        }
+
+        .contentCentent {
+            width: 600px;
+            height: 53px;
+            background: url(./imges/banner.jpg) no-repeat 158px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navImg">
+        <!-- <img src="img/logo.jpg" alt=""> -->
+        <ul>
+            <li>
+                1
+            </li>
+            <li>
+                1
+            </li>
+            <li>
+                1
+            </li>
+        </ul>
+        <div class="borderBottom"></div>
+    </div>
+    <div class="contentLeft">
+        <ul class="brief">
+            <li>公司首页</li>
+            <li>工作团队</li>
+            <li>项目</li>
+            <li>市场与投资</li>
+            <li>员工福利</li>
+            <li>员工花名册</li>
+            <li>思想学习</li>
+            <li>出版物</li>
+            <li>日常安排</li>
+            <li>集体活动</li>
+            <li>友情链接</li>
+            <li>雁过留声</li>
+            <li>联系我们</li>
+        </ul>
+        <div class="searche">
+            查找：<input type="text" class="inp"> <input type="button" value="搜索">
+        </div>
+    </div>
+    <div class="contentCentent">
+    </div>
+</body>
+
+</html>

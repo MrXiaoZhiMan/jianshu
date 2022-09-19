@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // function test() {
+        //     alert('11111');
+        //     return function() {
+        //         alert('asdfadsf')
+        //     }
+        // }
+        // 调用这个函数后弹出 11111 然后将return返回的函数
+        // 内存块首地址赋值给a，调用a就调用了return返回的那个函数
+        // a是全局作用域
+        // var a = test();
+        // a();
+        // 私有/布局/内部函数：在函数内部创建的函数
+        // 能返回函数的函数：函数的返回值是一个函数
+        // 能重写自己的函数：覆盖原有的函数的地址
+        function test() { // #1234
+          alert('test函数')
+          test = function () { // #3333  将函数赋值给test 就相当于
+            // 将内存块首地址赋值给test
+            alert('将新创建的函数赋值给test地址');
+          }
+        }
+        test();
+        test();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

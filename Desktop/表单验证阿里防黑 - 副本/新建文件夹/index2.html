@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index2.css">
+  <script>
+    window.onload = function () {
+      function $(_id) {
+        return document.getElementById(_id);
+      }
+      var changeInformation = $('changeInformation');
+      var changeVerification = $('changeVerification');
+      var inp2 = $('inp2')
+      var form1 = $('form1');
+      var span4 =$('span4')
+      function vall() {
+        var changeValu = '';
+  // 循环出四个number验证码
+        for (var i = 0; i < 4; i++) {
+          var num = Math.floor(Math.random() * 1000) % 10;
+          changeValu = changeValu + num;
+        }
+        return changeValu;
+      }
+      changeInformation.value = vall();
+      // 点击后刷新验证码
+      changeVerification.onclick = function (){
+        changeInformation.value = vall();
+      }
+      // 验证码不相同的话 报错 不提交
+      form1.onsubmit = function (event){
+          if (inp2.value !=changeInformation.value ){
+            span4.innerText = '验证码输入错误';
+            span4.style = 'color:#ff1123';
+            event.preventDefault();
+          }
+        }
+        inp2.onfocus = function(){
+          span4.innerText = '输入正确的验证码';
+          span4.style = 'color:#2a3a19';
+          inp2.value = '';
+        }
+        inp2.onblur = function (){
+          if (inp2.value.length != changeInformation.value.length){
+            span4.innerText = '验证码输入错误';
+            span4.style = 'color:#ff1123'
+          }
+        }
+      }
+  </script>
+</head>
+<body>
+  <form action="aaa.com" method="post" id="form1">
+    <div class="All">
+      <img src="images/alxr.jpg" alt="">
+      <div class="functionAll">
+        <span id="promptInformation">
+          请输入正确的验证码，以辨认是用户操作而非机器
+        </span>
+        <div class="Verification"><input type="text" id="changeInformation" >
+          <span id="changeVerification">更改验证码</span>
+        </div>
+        <div class="compareVerification">
+          <span id="span2">验证码:</span> <input type="text" class="trueVerification" id="inp2"> 
+          <span id="span4">输入正确的验证码</span>
+          <span id='span3'> <input type="submit" class="compareVerificationInp" value="注册"> </span>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

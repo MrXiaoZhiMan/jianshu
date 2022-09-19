@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    background-color: rgb(213, 245, 248);
+    padding: 0;
+}
+
+div {
+    width: 430px;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+#ovhi {
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+h1 {
+    width: 400px;
+    text-align: center;
+}
+
+#iemor1 {
+    background-color: rgb(255, 255, 255);
+}
+
+#iemor,
+#iemor1 {
+    color: #000;
+    width: 195px;
+    float: left;
+    display: block;
+    /* padding: 10px ; */
+    padding: 10px;
+    text-align: center;
+
+}
+
+#iemor,
+#iemor1 {
+    color: #000;
+    /* font-size: 20px; */
+    text-decoration: none;
+    background-color: #fff;
+}
+
+#iemor {
+    background-color: rgb(213, 245, 248);
+}
+
+#radior {
+    margin: 0 10px;
+}
+
+.faces {
+    width: 430px;
+    margin: 20px auto;
+}
+
+/* 清除浮动 */
+.face2 {
+    overflow: hidden;
+}
+
+.face2 ul {
+    float: left;
+    margin: 0 55px;
+    color: #555555;
+    background-color: #fff;
+}
+
+.face2 ul li {
+    height: 28px;
+    line-height: 28px;
+    background-color: #fff;
+}
+
+.emore1,
+.emore {
+    width: 430px;
+    border: #bcbcbc;
+    height: 46px;
+}
+
+.emore span {
+    background-color: #fff;
+    padding-left: 30px;
+}
+
+
+
+
+.emore1 span {
+    position:relative;
+    background-color: #fff;
+    color: #cccccc;
+}
+
+.emore1 img {
+    position: absolute;
+    top:2.5px;
+    background-color: #fff;
+    padding-left: 100px;
+
+}
+
+.emore1 input,
+.emore input,
+#inp4 {
+    height: 46px;
+    width: 260px;
+    border: 0;
+    outline: none;
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+#inp5 {
+    width: 100px;
+    height: 45px;
+    outline: none;
+    border: 0;
+    background-color: #fff;
+    margin-left: 30px;
+}
+
+.emore1 input {
+    height: 46px;
+    line-height: 35px;
+}
+
+#emoreFace {
+    display: block;
+    background-color: rgb(213, 245, 248);
+    color: #cccccc;
+    height: 15px;
+    line-height: 15px;
+}
+
+#pwdFace {
+    display: block;
+    background-color: rgb(213, 245, 248);
+    padding: 0 30px;
+}
+
+.getIn {
+    /* overflow: hidden; */
+    width: 430px;
+    height: 46px;
+}
+
+.getIn #inp3 {
+    width: 260px;
+    height: 46px;
+    border: 0;
+    background-color: #fff;
+    outline: none;
+    border-right: 1px solid #cccccc;
+}
+
+.getIn #getInNum,
+#changeInFace {
+    background-color: #fff;
+    color: #555555;
+    padding: 0 10px;
+}
+
+#changeInFace {
+    color: #000;
+    background-color: #fff;
+
+}
+
+#changeInNumFace {
+    display: block;
+    padding: 0 30px;
+    color: #cccccc;
+}
+
+.emore2 {
+    margin: 0;
+    width: 430px;
+    height: 46px;
+    background-color: #fff;
+}
+
+.zhangeInformation {
+    height: 46px;
+    margin: 0 auto;
+    background-color: rgb(213, 245, 248);
+}
+
+#changeInFmtnFace {
+    margin: 0 30px;
+    display: block;
+    height: 46px;
+    margin-top: 2px;
+    color: #cccccc;
+}
+
+#submite {
+    display: block;
+    border: 0px;
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: rgb(23, 67, 97);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(158, 174, 202);
+    border-radius: 7px;
+}

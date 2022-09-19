@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // function test() {
+        //     // 这个函数称为局部函数 或者私有函数
+        //  function a(){
+        //     alert('a')
+        //  }
+        //  因为a是test里面的函数 所以只能在这个函数里面调用 他是局部的函数
+        // （老师的说法是 调用a以后就销毁了未明白什么意思）
+        //  a();
+        // }
+        // test();
+
+        function test(sex) {
+            function a(name) {
+                alert(name)
+            }
+            a('top');
+            alert(sex)
+        }
+        test('bag')
+    </script>
+</head>
+<body>
+</body>
+</html>

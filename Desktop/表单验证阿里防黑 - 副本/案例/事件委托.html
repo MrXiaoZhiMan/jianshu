@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li>tghjk</li>
+        <li>fghjk</li>
+        <li>fghjk</li>
+        <li>fghjk</li>
+    </ul>
+</body>
+<script>
+ var ul = document.querySelector('ul');
+ ul.addEventListener('click',function(e){
+    // 利用事件冒泡原理绑定ul再点击li时也会触发事件
+    // alert('点击的是li')
+    // e.target可以获取到点击的对象
+    e.target.style.backgroundColor= '#bcbcbc'
+ })
+</script>
+</html>

@@ -1,0 +1,57 @@
+ * {
+    margin: 0;
+    padding: 0;
+ }
+ body {
+    margin-left: 50px;
+    margin-top: 30px;
+ }
+ .content {
+    width: 1000px;
+    height: 79px;
+    border: 1px solid #09f;
+ }
+ ul {
+    list-style: none;
+    height: 22px;
+ }
+ ul li {
+    float: left;
+    margin-right: 15px;
+ }
+ ul li a {
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+    border: 1px solid #09f;
+    /* border-radius: 3px 3px 0 0 ; */
+    background-color: rgb(157, 201, 221);
+ }
+
+ body#blog li.blog a:link,
+ body#blog li.blog a:visited,
+ body#music li.music a:link,
+ body#music li.music a:visited,
+ body#nextStation li.nextStation a:link,
+ body#nextStation li.nextStation a:visited,
+ body#storts li.storts a:link,
+ body#storts li.storts a:visited,
+ body#news li.news a:link,
+ body#news li.news a:visited,
+ body#home li.home a:link,
+ body#home li.home a:visited {
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    color: #000;
+ }
+ body#blog li.blog a:hover,
+ body#home li.home a:hover,
+ body#music li.music a:hover,
+ body#news li.news a:hover,
+ body#nextStation li.nextStation a:hover,
+ body#storts li.storts a:hover {
+    background-color: rgb(83, 32, 212);
+    color: #fff;
+ }
+
+ 

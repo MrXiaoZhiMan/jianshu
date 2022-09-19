@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+      // 构造器函数/类：用来创建对象{}的函数
+        function Student(age,name,sex) {
+          this.age = age;
+          this.name = name;
+          this.sex = sex;
+          this.eat = function (){
+            alert('吃出健康来');
+          }
+        }
+        //  function Student(age,name,sex) {
+        //   this.age = age;
+        //   this.age = name;
+        //   this.age = sex;
+        //   this.eat = function(){
+        //     alert('吃')
+        //   }
+        //  }
+        //  var add = new Student(18,'tom','男')
+         
+
+        // 这里的new就是相当于创建了一个空的对象 this之前是指向Student里面的 创建了
+        // 一个新对象后就相当于把Student里面的属性等  放在了new创建的空的对象中
+        //  变成了 {age：18，name：'tom',sex:'男'，eat:function(){}}
+        var attribute = new Student(18,'tom','男');
+    </script>
+</head>
+<body>
+    <!-- 构造器函/类： 用来批量创建对象的函数 -->
+   <!-- 
+    new object;
+    new Date();
+    new Array(); 
+    new Function(); 
+  -->
+   <!-- 
+    1 new Object() {} #1111
+    2 调用Student()给新new对象添加属性和方法
+    3 new会将构造器中的this指向改成新new的空对象 #1111
+    -->
+</body>
+</html>

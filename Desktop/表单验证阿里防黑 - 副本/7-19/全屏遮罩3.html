@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #bgc {
+            background: rgba(0, 0, 0, .3);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #ima {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -33px;
+            mask-type: -33px;
+        }
+    </style>
+</head>
+<script>
+    function tipc() {
+        var bgc = document.getElementById('bgc');
+        var ima = document.getElementById('ima');
+        var btn = document.getElementById('btn');
+        bgc.style.display = 'block';
+        ima.style.display = 'block';
+        btn.disabled = true;
+        setInterval(function () {
+            bgc.style.display = 'none';
+            ima.style.display = 'none';
+            btn.disabled = false;
+        }, 2000)
+    }
+</script>
+
+<body>
+    <div id="bgc" style="display:none;"></div>
+    <img src="images/loading.gif" id="ima" style="display:none;" alt="">
+    <input type="button" id="btn" onclick="tipc()" value="查询">
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+    <p>假装数据。。。。。</p>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+<script>
+    var div = document.querySelector('div')
+    // 添加一个类
+    function addClassName(dom,clas){
+       return dom.className = dom.className + ' ' +clas
+    }
+    // 删除一个类
+    function remove(dom,clas){
+      return  dom.className = dom.className.replase(clas,'');
+    }
+    // 添加多个类
+    function addClassNames(dom,clas){
+        var a = dom.className;
+        for(var i=0;i<clas.length;i++){
+            dom.className=dom.className+' '+clas[i]; 
+        }
+        return dom.className = dom.className;
+    }
+    // 删除多个类
+    function removeClassNames(dom,clas){
+     var a = dom.className;
+     for(var i =0;i<clas.length;i++){
+        a =  a.replase(clas[i],'');
+     }
+     return dom.className = a;
+    }
+</script>
+</html>

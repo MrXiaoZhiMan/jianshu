@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        //    function Students(name,eag,sex){
+        //     var obj = {}; // new了一个新对象 每一次被调用时都会创建一个不同地址的对象
+        //     obj.name=name;
+        //     obj.eag=eag;
+        //     obj.sex=sex;
+        //     obj.state=function (){
+        //         alert('持之以恒')
+        //     }
+        //     return obj;
+        //    }
+        //    var obj1=Students('tom','男',22)
+        //    var obj2=Students('tome','男',22)
+        //    var obj3=Students('toms','男',22)
+        //    console.log(obj1);
+        //    console.log(obj2);
+        //    console.log(obj3);
+
+        // 改进版
+        // function Students(name, eag, sex) {
+        //     // var obj = {}; // new了一个新对象 每一次被调用时都会创建一个不同地址的对象
+        //     this.name = name;
+        //     this.eag = eag;
+        //     this.sex = sex;
+        //     this.state = function () {
+        //         alert('持之以恒')
+        //     }
+        // }
+        // var obj1 = new Students('tom', '男', 22)
+        // var obj2 = new Students('tome', '男', 22)
+        // var obj3 = new Students('toms', '男', 22)
+        // console.log(obj1);
+        // console.log(obj2);
+        // console.log(obj3);
+        // Students.state=function(){
+        //     alert('jiayou1')
+        // }
+ // new在执行时会做四件事：
+ // 1.在内存中创建一个新的空对象。
+ // 2.让this指向这个新的对象。
+ // 3.执行构造函数里面的代码，给这个新的对象添加属性和方法。
+ // 4.返回这个新对象（所以构造函数里面不需要return）
+
+// var getValue,setValue
+//  (function test(){
+//   var secret =0;
+//   getValue = function () {
+//     return ('余额'+secret)
+//   }
+//   setValue = function (value){
+//  secret = value
+//   }
+//  })()
+//  console.log(getValue());
+//  setValue(120000);
+//  console.log(getValue());
+
+
+//  javascript对象分为两类
+ // function 对象
+//   function对象都有一个内置属性prototype{}
+// prototype{}  叫做原型对象  他是构造器函数的自身属性（new一下才是构造器函数）
+// 2，object对象  
+// 每个object对象都有一个属性 ———proto———，始终等
+// 于对象的构造器函数的 prototype
+// Student.prototype === s1.__proto__  是正确的
+
+// 同类型对象：属性的值都不同---工厂模式创建
+// 方法和方法体完全相同--原型模式共享方法
+
+
+
+// 改造版
+// function Student(name,age,sex){
+//   // 工厂方式添加属性
+//   this.name = name;
+//   this.age = age;
+//   this.sex = sex;
+
+// }
+// // 原型方式共享方法
+// // {constructor:f}
+// Student.prototype.study = function(){
+//   alert('持之以恒')
+// }
+// // {constructor:f,study:f}
+// // 使用构造器函数 (构造器函数也叫类)实例化对象
+// // 通过类创建对象的过过程成为实例化过程intanceof
+// var s1 = new Student('tom',19,'男')
+// var s1 = new Student('jarry',19,'男') 
+    function Student(age,sex,name){
+      // 工厂模式
+         this.age = age;
+         this.sex=sex;
+         this.name= name;
+    }
+    // 原型方法
+    Student.prototype.study = function (){
+      alert('生活匆别错过晚霞和夕阳');
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

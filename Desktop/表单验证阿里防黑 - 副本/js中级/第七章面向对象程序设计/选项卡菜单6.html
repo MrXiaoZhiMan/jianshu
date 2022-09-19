@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .btnn {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #bcbcbc;
+            background-color: rgb(206, 93, 93);
+            display: none;
+        }
+        input.active{
+            background-color: rgb(235, 57, 57);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="按钮1">
+    <input type="button" value="按钮2">
+    <input type="button" value="按钮3">
+    <div class="btnn" style="display: block;">11111111111</div>
+    <div class="btnn">2222222222222</div>
+    <div class="btnn">33333333333333</div>
+</body>
+<script>
+    var btns = document.querySelectorAll('input');
+    var divs = document.querySelectorAll('.btnn');
+    // console.log(divs);
+    // for (var i = 0; i < btns.length; i++) {
+    //     btns[i].index=i;
+    //     btns[i].onclick = function () {
+    //         for (var j = 0; j < btns.length; j++) {
+    //             btns[j].className = '';
+    //              divs[j].style.display = 'none'
+    //         }
+    //         this.className="active"
+    //         divs[this.index].style.display = 'block';
+    //     }
+    // }
+
+
+    var btns = document.querySelectorAll('input');
+    var divs = document.querySelectorAll('.btnn')
+    for(var i = 0 ; i <btns.length;i++){
+        btns[i].index = i;
+        btns[i].onclick = function(){
+            for(var j =0; j<btns.length;j++){
+                btns[j].className = '';
+                divs[j].style.display = 'none';
+            }
+            this.className = "active";
+            divs[this.index].style.display='block';
+        }
+    }
+</script>
+
+</html>

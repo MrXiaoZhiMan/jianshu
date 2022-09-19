@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+   
+window.onload = function (){
+    var arr = document.getElementById('form1')
+    form1.onsubmit = function (event){
+
+    
+    function input_dengluu() {
+        if (user_name.length == '') {
+            p1.style = 'display:block';
+            event.preventDefault();
+        } else {
+            p1.style = "display: none;"
+            event.preventDefault();
+        }
+    }
+    window.onload = function() {
+        var user_name = document.getElementById("user_name");
+        var password_mima = document.getElementById("password_mima");
+        var p1 = document.getElementById("p1");
+        console.log(input_denglu);
+
+
+
+        function input_denglu1() {
+            if (password_mima.value.length == 0) {
+                p1.innerHTML = '<font color="#ff5100">请输入密码</font>'
+
+            } else {
+                p1.style = "display: none;"
+                event.preventDefault;
+            }
+        }
+    }
+}
+}
+</script>
+
+<body>
+    <form action="http://www.baidu.com" id="form1">
+        <table border="0" width="100%" bgcolor="#d6e1ff">
+            <tr>
+                <td rowspan="17" width="60"></td>
+                <td rowspan="17" width="600" height="600">< img src="images/广告.png" width="600" height="600"></td>
+                <td></td>
+                <td rowspan="17"></td>
+            </tr>
+            <tr>
+                <td rowspan="3" align="center">
+                    <h2>邮箱账号登录</h2>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center"><input type="text" placeholder="邮箱账号或手机号码" class="username" id="user_name"></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center"><input type="password" placeholder="输入密码" class="username" id="password_mima"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="p1" style="display: none;">
+                        <font color="#ff5100">请输入账号</font>
+                    </p >
+
+                </td>
+
+
+            </tr>
+            <tr>
+                <td rowspan=" 2 " align="center ">
+                    <!-- <input value="登录 " type="button " id="input_denglu "></input> -->
+                    <button id="input_denglu" onclick="input_dengluu()">登录</button>
+
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td rowspan="2 " align="center "><input type="button " value="未定义 ">
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td rowspan="2 " align="center ">注册网易邮箱 邮箱官方app</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+
+
+                <td align="center ">< img src="# ">升级会员,y邮箱干净,无广告<button>升级</button></td>
+
+            </tr>
+
+        </table>
+
+
+    </form>
+
+</body>
+</html>

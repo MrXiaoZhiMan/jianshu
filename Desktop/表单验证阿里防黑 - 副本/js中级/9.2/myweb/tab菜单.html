@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			border:1px solid #f00;
+			width: 200px;
+			height: 260px;
+			position: relative;
+		}
+		input{
+			width: 60px;
+		}
+		input#one{
+			position: absolute;
+			left: 0px;
+			top:0px;
+		}
+		input#two{
+			position: absolute;
+			left: 65px;
+			top:0px;
+		}
+		input#three{
+			position: absolute;
+			left: 130px;
+			top:0px;
+		}
+		#div1 div{
+			background: #ff0;
+			margin-top: 30px;
+			height: 200px;
+			display: none;
+		}
+        .highlight{
+        	background: #09f;
+        	color:#fff;
+        }
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var div1=document.getElementById("div1");
+			var inputs=div1.getElementsByTagName("input");
+			var divs=div1.getElementsByTagName("div");
+			for(var i=0;i<inputs.length;i++){
+				inputs[i].onclick=function(){
+					//清除所有按钮的class
+				//隐藏所有div
+				for(var j=0;j<inputs.length;j++){
+					inputs[j].className="";
+					divs[j].style.display="none";
+				}
+				console.log("this.nextSibling.nextSibling",this.nextSibling.nextSibling);
+				this.className="highlight";
+				if(window.addEventListener){
+					//IE9+
+					this.nextElementSibling.style.display="block";
+				}else{
+					this.nextSibling.nextSibling.style.display="block";
+				}
+			  }
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<input type="button" value="导航1" id="one">
+		<div style="display: block;">内容1</div>
+		<input type="button" value="导航2" id="two">
+		<div>内容2</div>
+		<input type="button" value="导航3" id="three">
+		<div>内容3</div>
+	</div>
+</body>
+</html>

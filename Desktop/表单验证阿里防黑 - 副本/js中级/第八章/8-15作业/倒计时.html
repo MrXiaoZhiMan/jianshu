@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #b4e0dd;
+        }
+
+        .times {
+            background: url(img/timg.jpg) no-repeat;
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        .inp {
+            padding-top: 150px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .time2 {
+            position: absolute;
+            top: 260px;
+            left: 449px;
+            /* background-color: #bcbcbc; */
+        }
+
+        .time2 input {
+            width: 50px;
+            height: 50px;
+            opacity: 0.3;
+            text-align: center;
+        }
+
+        .inp input {
+            border: 1px solid #b4e0dd;
+            width: 60px;
+            height: 50px;
+            opacity: 0.3;
+            font-size: 18px;
+            color: #000;
+            text-align: center;
+        }
+
+        .inp span {
+            color: #445e8f;
+            font-size: 16px;
+        }
+
+        .time2 div {
+            color: #000;
+            font-size: 20px;
+            margin: 10px auto;
+        }
+
+        button {
+            position: absolute;
+            top: 400px;
+            left: 600px;
+            background-color: rgb(66, 135, 138);
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            border: 0;
+        }
+
+        #last {
+            width: 300px;
+            height: 300px;
+            background-color: #bcbcbc;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="times" id="times">
+        <div class="inp" id="inps">
+            <input type="text" value="2025" id="year">
+            <span>年</span>
+            <input type="text" value="8" id="month">
+            <span>月</span>
+            <input type="text" value="16" id="date">
+            <span>日</span>
+            <input type="text" value="0" id="hours">
+            <span>时</span>
+            <input type="text" value="0" id="minutes">
+            <span>分</span>
+            <input type="text" value="0" id="seconds">
+            <span>秒</span>
+        </div>
+    </div>
+    <div class="time2">
+        <div>倒计时还有</div>
+        <input type="text" value="" id="year1">
+        <span>年</span>
+        <input type="text" value="" id="month1">
+        <span>月</span>
+        <input type="text" value="" id="date1">
+        <span>日</span>
+        <input type="text" value="" id="hours1">
+        <span>时</span>
+        <input type="text" value="" id="minutes1">
+        <span>分</span>
+        <input type="text" value="" id="seconds1">
+        <span>秒</span>
+    </div>
+    <button id="btn">倒计时开始</button>
+    <div id="last"></div>
+</body>
+<script>
+    var $ = function test(_id) {
+        return document.getElementById(_id)
+    }
+    var times = $('times');
+    var inps = $('inps');
+    var time2 = $('time2');
+    var btn = $('btn');
+    var last = $('last')
+    // 获取输入的时间
+    var year = $('year');
+    var month = $('month');
+    var date = $('date');
+    var hours = $('hours');
+    var minutes = $('minutes');
+    var seconds = $('seconds');
+    //    获取倒计时时间
+    var years = $('year1');
+    var months = $('month1');
+    var dates = $('date1');
+    var hourss = $('hours1');
+    var minutess = $('minutes1');
+    var secondss = $('seconds1');
+
+    // var minusTime;
+    function minusTimeee() {
+        // 获取当前时间
+        var myTime = new Date();
+        // 获取当前时间戳
+        var myTimeGet = myTime.getTime();
+        // console.log(myTimeGet);
+        // 获取输入的时间
+        var myInputTime = year.value + '/' + month.value + '/' + date.value + ' ' + hours.value + ':' + minutes.value + ':' + seconds.value;//获取时间的格式，.value时获取输入的内容
+        // 将获取过来的时间 转换成当前时间
+        console.log(myInputTime);
+        var myInputTimes = new Date(myInputTime);
+        // var nyear = myInputTimes.getFullYear();
+        // var nmonths = myInputTimes.getMonth() + 1;
+        // 装换成时间戳
+        var myInputTimess = myInputTimes.getTime();
+        var minusTime = Math.floor((myInputTimess - myTimeGet) / 1000)
+        if (minusTime > 0) {
+            years.value = Math.floor(parseInt(minusTime / 60 / 60 / 24 / 365)) < 10 ? '0' + Math.floor(parseInt(minusTime / 60 / 60 / 24 / 365)) : Math.floor(parseInt(minusTime / 60 / 60 / 24 / 365));
+            months.value = Math.floor(parseInt(minusTime / 60 / 60 / 24 / 30) % 32) < 10 ? '0' + Math.floor(parseInt(minusTime / 60 / 60 / 24 / 30) % 32) : Math.floor(parseInt(minusTime / 60 / 60 / 24 / 30) % 32);
+            dates.value = Math.floor(parseInt(minusTime / 60 / 60 / 24) % 32) < 10 ? '0' + Math.floor(parseInt(minusTime / 60 / 60 / 24) % 32) : Math.floor(parseInt(minusTime / 60 / 60 / 24) % 32);
+            hourss.value = Math.floor(parseInt(minusTime / 3600) % 24) < 10 ? '0' + Math.floor(parseInt(minusTime / 60 / 60 % 24)) : Math.floor(parseInt(minusTime / 60 / 60 % 24));
+            minutess.value = Math.floor(parseInt(minusTime / 60) % 60) < 10 ? '0' + Math.floor(parseInt(minusTime / 60 % 60)) : Math.floor(parseInt(minusTime / 60 % 60));
+            secondss.value = Math.floor(parseInt(minusTime % 60)) < 10 ? '0' + Math.floor(parseInt(minusTime % 60)) : Math.floor(parseInt(minusTime % 60));
+        }
+        minusTime--
+    }
+
+    btn.onclick = function () {
+        setInterval(minusTimeee, 1000);
+    }
+// //    问题是无法进行没有年份的倒计时
+</script>
+
+</html>

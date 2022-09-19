@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f00;
+        display: none;
+        position: absolute;
+      }
+
+      input {
+        position: relative;
+        top: 0px;
+        left: 12px;
+        margin-right: 20px;
+      }
+    </style>
+    <script src="siblingtab菜单栏.js"></script>
+    <script>
+      addEvent(window, "load", function () {
+        var btns = document.getElementsByTagName("input");
+        var divs = document.querySelectorAll("div");
+        for (var i = 0; i < btns.length; i++) {
+          addEvent(btns[i], "click", function () {
+            for (var j = 0; j < btns.length; j++) {
+              btns[j].style.backgroundColor = "";
+              divs[j].style.display = "none";
+            }
+            this.style.backgroundColor = "pink";
+            this.nextSibling.nextSibling.style.display = "block";
+            console.log(this);
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <input type="button" value="按钮1" />
+    <div style="display: block">11111</div>
+    <input type="button" value="按钮2" />
+    <div>22222</div>
+    <input type="button" value="按钮3" />
+    <div>333333</div>
+    <input type="button" value="按钮4" />
+    <div>444444</div>
+  </body>
+</html>

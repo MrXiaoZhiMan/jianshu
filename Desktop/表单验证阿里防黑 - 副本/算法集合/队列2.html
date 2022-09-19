@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+    function Queue(){
+        this.items = [];
+        Queue.prototype.onqueue = function(element){
+        this.items.push(element)
+        }
+        Queue.prototype.dequeue = function(){
+           return this.items.shift();
+        }
+        Queue.prototype.front = function(){
+           return this.items[0]
+        }
+        Queue.prototype.isEmpty =function(){
+            this.items.isEmpty.length == 0
+        }
+        Queue.prototype.size = function(){
+           return this.items.length
+        }
+        Queue.prototype.toString = function(){
+            var arr = '';
+            for(var i =0;i<this.items.length;i++){
+                arr += this.items[i]+'';
+            }
+            return arr;
+        }
+    }
+    var queue = new Queue();
+
+
+    function passGame(nameList,num){
+        var queue = new Queue()
+       for(var i =0;i<nameList.length;i++){
+         queue.onqueue(nameList[i]);
+       }
+
+     while(queue.size() > 1){
+        for(var i = 0 ;i<num-1;i++){
+        queue.onqueue(queue.dequeue());
+       }
+    //    删除for循环后 符合那个数字得元素
+      queue.dequeue();
+      
+     }
+     alert(queue.size());
+  var endName = queue.front()
+  alert('最终剩下的人'+endName);
+  return nameList.indexOf(endName)
+    }
+   names=['asdf','asddddd','fh','hj','yui']
+   alert(passGame(names))
+  
+</script>
+</html>

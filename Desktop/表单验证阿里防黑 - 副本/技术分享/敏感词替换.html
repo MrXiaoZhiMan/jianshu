@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .wrap{
+            width: 800px;
+            background-color: #09f;
+            margin: 150px auto;
+            text-align: center;
+            padding: 20px;
+        }
+        ul{
+            line-height: 44px;
+
+        }
+        li{
+            border-bottom:2px dashed #aaa;
+           /* margin-top: 20px; */
+           color: #fff;
+        }
+        a{
+          color: #fff;
+          padding-left: 300px;
+          box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap_top">
+            <span>发布品论：</span>
+            <textarea  cols="60" rows="10" id="text"></textarea>
+            <button id="btn">发布</button>
+        </div>
+        <ul id="ul">
+        </ul>
+    </div>
+</body>
+<script>
+    var text = document.querySelector('#text');
+    var btn = document.querySelector('#btn')
+    var ul = document.querySelector('#ul')
+    var regexp = /哈|嘿|呵/gi;
+  btn.onclick = function(){
+   if(text.value.trim()==''){
+    alert('fghj')
+    return;
+   }
+   var li = document.createElement('li')
+   li.innerHTML= text.value.replace(regexp,'*') + `<a href='javascript:;'>删除</a>`;
+   console.log(text.value);
+   ul.insertBefore(li,ul.children[0])
+   text.value='';
+
+   var a_all = document.createElement('a')  
+   for(var i =0;i<a_all.length;i++){
+    a_all[i].onclick= function(){
+        a_all[i].preventNode.remove();
+        
+    }
+   }
+}
+</script>
+</html>

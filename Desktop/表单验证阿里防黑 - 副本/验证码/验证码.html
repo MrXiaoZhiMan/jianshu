@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .captcha {
+            width: 150px;
+            height: 36px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="captcha">
+        1
+    </div>
+    <button>按钮</button>
+</body>
+<script>
+    var div = document.querySelector('.captcha');
+    var btn = document.querySelector('button');
+
+    // var str = math;
+    btn.onclick = function () {
+        var math = '';
+        for (var i = 0; i < 4; i++) {
+            math += Math.floor(Math.random() * 10);
+            // console.log(math);
+        }
+        div.innerText = math;
+    }
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <input type="button" value="按钮1">
+  <input type="button" value="按钮2">
+  <input type="button" value="按钮3">
+  <input type="button" value="按钮4">
+  <input type="button" value="按钮5">
+
+
+</body>
+<script>
+    var btn = document.getElementsByTagName('input')
+    function test(){
+     for(var i = 0; i < btn.length;i++) {
+        btn[i].onclick = function (){
+            console.log(this);
+        }
+     }
+    }
+    test();
+
+    // this代表当前发生事件的对象
+    // 深入理解：当前的方法属于那个对象，this就代表那个对象
+
+    //  apply(指向的参数，数组) 改变this指向问题，但指向的是数组（参数是数组）
+    function test(x,y){
+        alert(x+y);
+    }
+    test.apply("abc",[1,2])
+    
+    // call 方法改变函数内this指向为指定对象
+    // 事件处理函数中的this，触发事件的时候，this指向触发事件的DOM对象
+    // 函数对象bind（指向对象）
+    // （1）改变函数调用的时候的this指向为指定对象
+    // 特别注意：bind方法不会调用函数仅仅在函数调用的时候
+    // 改变函数内部的this指向为指定对象。
+</script>
+</html>

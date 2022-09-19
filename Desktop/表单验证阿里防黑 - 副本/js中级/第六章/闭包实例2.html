@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var y;
+        function test(){
+            var x=10;
+            y=function(){
+                return x;
+            }
+        }
+        // 调用函数
+        test();
+        // 调用
+        alert(y());
+        // 说明：y实际上就是闭包y函数。函数test中的局部变量x
+        // 并没有在test函数调用后删除，x一直保留在内存中。y函数依赖于test函数都
+        // 一直保存在内存中，不会被垃圾回收机制(garbage collection)回收。
+    </script>
+</head>
+<body>
+</body>
+</html>

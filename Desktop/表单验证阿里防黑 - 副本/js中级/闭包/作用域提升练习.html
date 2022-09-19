@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        //      test(); //解析时将var a 赋值为undefined 后 调用函数首地址
+        //     //  因为a还没赋值就调用所以弹出的是undefined
+        // function test() {
+        //     // a= 10;
+        //     alert('test函数内打印a' + a)
+        // }
+        // var a = 100; // 解析时将var a 赋值为undefined 后
+
+        // var test = function () {
+        //     var x = 10;
+        //     alert(x)
+        // }
+        // test 是undefined 因为匿名函数不参加预解析 所以test调用
+        // 就相当于调用undefined 类型 报错不是函数
+
+        // var  a = 0,b=0;
+        // function A(a) {
+        //     A=function() {
+        //         alert(a+b++);
+        //         console.log(a);
+        //     }
+        //     alert(a++);
+        // }
+        // A(1);
+        // A(3);
+
+        // function test(){
+        //     function a(s){
+        //         alert(s)
+
+        //     }
+        //     // a();
+        //     a('s');
+        // }
+        // test();
+
+
+        //     function S(){ //递归函数
+        //         alert(66)
+        //         S();
+        //     }
+        //    S();
+
+        // function a(){
+        //     return 1;
+        // }
+        // function b(){
+        //     return 2;
+        // }
+        // function add(x,y){
+        //     alert(x()+y())
+        // }
+        // add(a,b);
+        function test() {
+            alert('函数外层的');
+            test = function () {
+                alert('将函数test位置更改了,属于函数内层的');
+            }
+        }
+        console.log(test());
+        console.log(test());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

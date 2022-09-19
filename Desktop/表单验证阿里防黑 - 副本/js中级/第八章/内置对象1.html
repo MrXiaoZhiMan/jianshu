@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        string array  math  data  function number 正则表达式  error错误
+    用户自定义对象  第七章
+    内置对象       第八章
+    BOM对象        第九章
+    DOM对象        第十章
+    事件对象       第十一章
+    Ajax对象       第十四章
+     charAt() 返回字符串第n个字符
+    计算机编码
+   ASCII 国际标准交换码 128+128 256位 只能表示英文字符 和 特殊字符 不支持其他的
+   任何编码前都是ASCII 码
+
+   GB2312 16位 简体中文
+
+   UTF-8 Unicode
+
+   charCodeAt() 返回字符串第n个Unicode编码
+
+   indexOf() 从左向右依次查找指定的字符 查不到返回-1 查到返回此字符的下标
+   lastIndexOf() 从右向左查找字符串
+
+
+
+
+
+
+concat（）　　　　 表示把几个数组合并成一个数组
+
+join（）　　　　　 设置分隔符连接数组元素为一个字符串
+
+pop（）　　　　　 移除数组最后一个元素
+
+shift（）　　　　　 移除数组中第一个元素
+
+slice（start，end） 返回数组中的一段
+
+splice（）　　　　 可以用来删除，可以用来插入，也可以用来替换
+
+push（）　　　　 往数组中新添加一个元素，返回最新长度
+
+sort（）　　　　　 对数组进行排序
+
+reverse（）　　　　反转数组的顺序
+
+toLocaleString()　　 把数组转换为本地字符串
+
+Global对象的常用方法：
+全局属性和函数，可用于所有内建的JavaScript对象
+
+escape（）　　　　 对字符串编码
+
+eval（） 　　　　　 把字符串解析为JavaScript代码并执行
+
+isNaN()　　　　　　判断一个值是否是NaN
+
+parseInt（）　　　 解析一个字符串并返回一个整数
+
+parseFloat（）　　 解析一个字符串并返回一个浮点数
+
+number（） 　　　　把对象的值转换为数字
+
+string（）　　　　　把对象的值转换为字符串
+
+String对象的常用方法
+charAt()　　　　　 　　　　返回指定索引的位置的字符
+
+indexOf() 　　　　 　　　　从前向后检索字符串，看是否含有指定字符串
+
+lastIndexOf()　　　 　　　　从后向前检索字符串，看是否含有指定字符串
+
+concat()　　 　　　　　　　连接两个或多个字符串
+
+match()　　 　　　　　　使用正则表达式模式对字符串执行查找，并将包含查找结果最为结果返回
+
+replace()　　　　　　　　　替换一个与正则表达式匹配的子串
+
+search()　　　　　　　　　 检索字符串中与正则表达式匹配的子串。如果没有找到匹配，则返回 -1。
+
+slice（start，end） 　　　　根据下表截取子串
+
+substring（start，end）　　 根据下表截取子串
+
+split()　　　　　　　　　　 根据指定分隔符将字符串分割成多个子串，并返回素组
+
+substr(start，length)　　　　根据长度截取字符串
+
+toUpperCase()　　　　　　 返回一个字符串，该字符串中的所有字母都被转化为大写字母。
+
+toLowerCase()　　　　　　 返回一个字符串，该字符串中的所有字母都被转化为小写字母。
+
+Math对象的方法
+ceil()　　　　向上取整。
+
+floor()　　　 向下取整。
+
+round()　　　四舍五入。
+
+random()　　取随机数。
+
+Date对象的方法
+getDate函数：　　　　　　返回日期的“日”部分，值为1～31。
+
+getDay函数：　　　　　　 返回星期，值为0～6，0表示星期日。
+
+getHours函数：　　　　　 返回日期的“小时”部分，值为0～23。
+
+getMinutes函数：　　　　 返回日期的“分钟”部分，值为0～59。
+
+getMonth函数：　　　　　 返回日期的“月”部分，值为0～11。
+
+getSeconds函数：　　　　 返回日期的“秒”部分，值为0～59。
+
+getTime函数：　　　　　　返回系统时间。
+
+getTimezoneOffset函数：　返回此地区的时差(当地时间与GMT格林威治标准时间的地区时差)，单位为分钟。
+
+getYear函数：　　　　　　返回日期的“年”部分。返回值以1900年为基数，如1999年为99。
+
+parse函数：　　　　　　　返回从1970年1月1日零时整算起的毫秒数(当地时间)
+
+setDate函数：　　　　　　设定日期的“日”部分，值为0～31。
+
+setHours函数：　　　　　 设定日期的“小时”部分，值为0～23。
+
+setMinutes函数：　　　　 设定日期的“分钟”部分，值为0～59。
+
+setMonth函数：　　　　　 设定日期的“月”部分，值为0～11。其中0表示1月，...，11表示12月。
+
+setSeconds函数：　　　　 设定日期的“秒”部分，值为0～59。
+
+setTime函数：　　　　　　设定时间。时间数值为1970年1月1日零时整算起的毫秒数。
+
+setYear函数：　　　　　　设定日期的“年”部分。
+
+toGMTString函数：　　　　转换日期成为字符串，为GMT格林威治标准时间。
+
+setLocaleString函数：　　 转换日期成为字符串，为当地时间。
+    -->  
+</body>
+</html>

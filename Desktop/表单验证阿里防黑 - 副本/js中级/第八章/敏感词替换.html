@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <textarea name="输入" id="t1" cols="30" rows="10"></textarea>
+    <div class="click">
+   <button class="submit">提交</button>
+   <button class="clc">清除</button>
+    </div>
+    <div class="talk"></div>
+</body>
+<script>
+    var regexp = /傻|操|马|B/gi
+   var sub = document.querySelector('.submit')
+   var clc = document.querySelector('.clc')
+   var t1 = document.querySelector('#t1')
+   var talk = document.querySelector('.talk')
+   clc.addEventListener('click',function(){
+    t1.value = '';
+    talk.value='';
+   })
+   sub.addEventListener('click',function(){
+    talk.innerHTML = t1.value.replace(regexp,'*')
+   })
+</script>
+</html>

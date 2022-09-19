@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .search{
+            position: relative;
+            width: 178px;
+            margin: 100px;
+        }
+        .son{
+            display: none;
+            position: absolute;
+            top: -40px;
+            width: 171px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+            color: #333;
+        }
+        .son::before{
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 30px;
+            top: 28px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+        }
+        .jd{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="search"> 
+   <div class="son"></div>
+   <input type="text" placeholder="请输入你的快递单号" class="jd">
+    </div>
+</body>
+<script>
+ var son = document.querySelector('.son')
+ var jd = document.querySelector('.jd')
+ jd.addEventListener('keyup',function(){
+    // console.log('fff');
+   if(this.value == ''){
+    son.style.display = 'none'
+   }else{
+    son.style.display = 'block'
+    son.innerText = this.value;
+   }
+ })
+</script>
+</html>

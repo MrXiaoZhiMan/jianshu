@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="timer"></div>
+</body>
+ <script>
+function timer(){
+    var div1 = document.querySelector('.timer');
+    var myData = new Date();
+    var year = myData.getFullYear();
+    var mouth = myData.getMonth()+1;
+    var data = myData.getDate();
+    var hours = myData.getHours();
+    hours<10?'0'+ hours:hours;
+    var minute = myData.getMinutes();
+    minute<10?'0'+minute:minute;
+    var seconds=myData.getSeconds();
+    seconds<10?'0'+seconds:seconds;
+    div1.innerHTML=year+'年'+mouth+'月'+data+'日'+hours+'时'+minute+'分'+seconds+'秒';
+ 
+}
+setInterval(timer,1000)
+ </script>
+</html>

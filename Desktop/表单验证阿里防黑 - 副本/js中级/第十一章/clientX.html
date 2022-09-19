@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    *{
+        margin: 100px;
+            padding: 0;
+    }
+
+        #div1{
+           
+            width: 300px;
+            height: 300px;
+            background-color: #bcbcbc;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        nihag1
+    </div>
+
+    <!-- 
+        offsetX 与offsetY 对于dom对象的位置 会议左上角为基准
+     -->
+</body>
+<script>
+    // clientX 对于浏览器窗口的位置
+    var div1 = document.querySelector('#div1')
+    div1.onmousemove = function(){
+        var e = e || window.event;
+        console.log('x:',e.clientX);
+        console.log('x:',e.clientY);
+    }
+</script>
+</html>

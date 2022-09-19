@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #div1 {
+            background-color: #090;
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        offsetLeft是只读得
+        style.left是可读写的（改变位置必然使用它）
+        2，offsetLeft值是一个整数 20
+        style.left是一个字符串”20px“
+        3 offsetLeft可以获得
+        行内定位样式值
+        内嵌定位样式值
+        独立样式表样式值
+        style.left只能设置或获得行内定位样式
+     -->
+    <div id="div1">
+
+    </div>
+    <input type="button" id="btn1" value="开始">
+    <input type="button" id="btn2" value="结束">
+</body>
+<script>
+    var div1 = document.querySelector('#div1')
+    var btn1 = document.querySelector('#btn1')
+    var btn2 = document.querySelector('#btn2')
+    var sid;
+    var flag = true;
+    btn1.onclick = function () {
+        sid = setInterval(function () {
+            if(flag){
+                div1.style.left = div1.offsetLeft + 1 + 'px';
+            } else {
+                div1.style.left = div1.offsetLeft - 1 + 'px';
+            }
+            if(div1.offsetLeft == 500){
+                flag=false;
+             
+            }
+            if(div1.offsetLeft == 0){
+                flag=true;
+            }
+        }, 1)
+    }
+   
+    btn2.addEventListener('click', function () {
+        clearInterval(sid)
+    })
+</script>
+
+</html>

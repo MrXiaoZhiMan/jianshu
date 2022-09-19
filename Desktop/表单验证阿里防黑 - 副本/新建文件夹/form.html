@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="form.css">;
+    <script>
+        // 用户名为空报错  密码为空报错  两次密码不相等报错  没有选择性别报错   没有选择城市报错
+        window.onload = function () {
+            //  获取id值对应的dom对象封装成一个函数，可以反复调用
+            var $ = function (_id) {
+                return document.getElementById(_id)
+            }
+            var form1 = $('form1');
+            var textFrame = $('textFrame');
+            var inp2 = $('inp2');
+            var inp3 = $('inp3');
+            var inp4 = $('inp4');
+            var nubIpone = $('nubIpone');
+            var inp5 = $('inp5');
+            var iemor1 =$('iemor1');
+            var aaa =$('aaa');
+            form1.onsubmit = function (event) { //event事件再触发onsubmit事件的时候 由js解释器创建并赋值
+                if (inp2.value.length == 0) {
+                    textFrame.innerText = '账号不能为空';
+                    textFrame.style = 'color:#ff1122';
+                    event.preventDefault();
+                }
+                // 用户名小于6个字符 报错
+                if (inp2.value.length < 6) {
+                    textFrame.innerText = '账号要在6 - 18个字符';
+                    textFrame.style = 'color:#ff1122';
+                    event.preventDefault();
+                }
+
+                // 用户名大于18个字符 报错
+                if (inp2.value.length > 18) {
+                    textFrame.innerText = '账号要在6 - 18个字符';
+                    textFrame.style = 'color:#ff1122';
+                    event.preventDefault();
+                }
+                // 密码为空报错
+
+                if (inp3.value == '') {
+                    padFrame.innerText = '密码不能为空';
+                    padFrame.style = 'color:#ff1122'
+                    event.preventDefault();
+                }
+                //  密码大于17 小于6 报错
+                if (inp3.value.length < 6) {
+                    padFrame.innerText = '密码要在7 - 18个字符';
+                    padFrame.style = 'color:#ff1122'
+                    event.preventDefault();
+                }
+
+                // 密码大于18个字符报错
+                if (inp3.value.length > 18) {
+                    padFrame.innerText = '密码要在7 - 18个字符';
+                    padFrame.style = 'color:#ff1122'
+                    event.preventDefault();
+                }
+                //  两次密码输入不正确报错
+                if (inp3.value != inp4.value) {
+                    nubIpone.innerText = '两次密码输入不正确';
+                    nubIpone.style = 'color:#ff1122';
+                    event.preventDefault();
+                }
+                if(inp5.checked != true){
+                    checkedrs.innerText = '请先同意条款';
+                    checkedrs.style = 'color:#ff1122';
+                    event.preventDefault();
+                }
+            }
+            // 用户名获取焦点 修改成默认值
+            inp2.onfocus = function () {
+                inp2.value = '';
+                textFrame.innerText = '*请输入账号';
+                textFrame.style = 'color:#2a3a19';
+            }
+            // 失去焦点时 账号长度小于六个字符报错
+            inp2.onblur = function () {
+                if (inp2.value.length < 6) {
+                    textFrame.innerText = '账号要在6 - 18个字符';
+                    textFrame.style = 'color:#ff1122';
+                    event.preventDefault();
+                }
+            }
+            // 密码获取焦点 修改成默认值
+            inp3.onfocus = function () {
+                inp3.value = '';
+                padFrame.innerText = '*请输入密码';
+                padFrame.style = 'color:#2a3a19';
+            }
+            inp3.onblur = function () {
+                if (inp3.value.length < 6 || inp3.value.length >17){
+                    padFrame.innerText = '密码要在6 - 18个字符';
+                    padFrame.style = 'color:#ff1122'
+                }
+            }
+            inp4.onfocus = function (){
+                inp4.value = '';
+            }
+        
+        }
+       
+    </script>
+</head>
+
+<body>
+    <!-- 
+        you have to believe in yourself that's...的中文翻译 - 百度翻译
+you have to believe in yourself that's the secret of success 
+
+你必须相信自己这是成功的秘诀
+     -->
+    <div class="allColor">
+        <form action="111.com" method="post" id="form1">
+            <h1>欢迎注册网易邮箱</h1>
+            <div id="ovhi"> <span id="iemor">免费邮箱</span><a href="form1.html" id="aaa"> <span id="iemor1">vip邮箱</span></a></div>
+
+            <input type="text" name="inp1" id="inp2">
+            <span id="textFrame">*请输入账号</span>
+
+            <input type="password" name="inp1" id="inp3">
+            <span id="padFrame">*请输入密码</span>
+
+            <input type="password" name="inp1" id="inp4">
+            <span id="nubIpone">*请确认密码</span>
+
+            <input type="checkbox" name="inp1" id="inp5">
+            <span id="checkedr">同意服务条款，隐私政策和儿童隐私政策</span>
+            <span id="checkedrs"></span>
+
+            <input type="submit" name="tj" id="submite">
+        </form>
+    </div>
+</body>
+
+</html>

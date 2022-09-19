@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function test(){
+            var x =[];
+            var i;
+            for(i=0;i<3;i++){
+                x[i]=function(){
+                    return i;
+                }
+            }
+            return x;
+        }
+        // 调用
+        var a=test();
+        alert(a[0]);
+        alert(a[1]);
+        alert(a[2]);
+        // 说明：输出的解结果都是3，因为循环完毕i的值未3，
+        // 这三个函数都指向这一个共同的值，如何解决这个问题？ 
+    </script>
+</head>
+<body>
+</body>
+</html>

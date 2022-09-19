@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        单引号‘’包裹的额-- 真正的的字符串， ‘’里面所有的内容都是字符串
+        说明：字符串连接运算符 --- 仅作字符循环连接运算
+        + 只做加法
+        2.“”包裹的也是字符串  --  “”先识别里面的变量然后再使用
+        3 <<<定界符
+
+        php最大的特就是万物皆函数
+          php数组分为两类
+          索引数组 下标是数字
+          关联数组 下标是字符串
+        常量：不会变化的变量
+        应用场景：创建一个变量后。这个变量很重要，不想在后面的代码中意外
+        被修改
+
+        php声明常量的方法  define("变量名称"，变量的值[，表示是否区分大小写默认是false，不区分])
+     -->
+
+<?php
+$str=<<<mark
+<script>
+  alert("ddsf")
+</script>
+mark;
+echo $str;
+?>
+</body>
+</html>

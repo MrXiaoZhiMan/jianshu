@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .shift {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: #bcbcbc;
+        position: absolute;
+        /* left: 0; */
+      }
+      .btn2{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        color: #aeca31;
+        background-color: rgb(135, 219, 184);
+        text-align: center;
+        line-height: 100px;
+      }
+      .btn1{
+        color: rgb(85, 238, 167);
+        background-color: rgb(222, 241, 114);
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="shift">
+      <div class="btn1">start</div>
+      <div class="btn2" style="display: none;">stop</div>
+      
+    </div>
+  </body>
+  <script>
+   function binds(_id){
+    return document.querySelector(_id);
+   }
+   var div1 = binds('.shift');
+   var btn1 = binds('.btn1');
+   var btn2 = binds('.btn2');
+   var move = true;
+   var sid;
+   btn1.addEventListener('click',function(){
+    sid = setInterval(function(){
+      if(move){
+       div1.style.left = div1.offsetLeft+2+'px';
+        btn1.style.display = 'none';
+        btn2.style.display = 'block'
+    }else{
+      div1.style.left = div1.offsetLeft-2+'px';
+        btn1.style.display = 'none';
+        btn2.style.display = 'block'
+    }
+    if(div1.offsetLeft == 300){
+      move=false
+    }
+    if(div1.offsetLeft === 0){
+      move= true;
+    }
+    },20)
+   })
+   btn2.addEventListener('click',function(){
+    clearInterval(sid)
+    btn1.style.display = 'block';
+        btn2.style.display = 'none'
+   })
+
+   
+  </script>
+</html>

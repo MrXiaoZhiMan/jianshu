@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var c=1;
+        function test() {
+            alert('test函数');
+         test=  function () {
+                alert('将新建的函数赋值给test地址');
+            }
+            c=10;
+        }
+
+        
+       test();// 调用的是外面全局作用域的 test 
+       test();// 调用的是里面 局部定位的test
+        // 函数名相同的话会产生覆盖的效果 但是其本身不发生改变 
+        // 依然可以调用
+        console.log(c);
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

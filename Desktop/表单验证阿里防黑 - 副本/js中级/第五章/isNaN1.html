@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var a = prompt('请输入数字');
+        var b = prompt('请输入数字');
+        if(isNaN(a)){
+            alert('请输入数字不能输入字母');
+            a = prompt('请再次输入数字');
+        }
+        if(isNaN(b)){
+            alert('请输入数字');
+            b = prompt('请再次输入数字');
+        }
+        alert(parseFloat(a)+parseFloat(b))
+    </script>
+</head>
+<body>
+</body>
+</html>

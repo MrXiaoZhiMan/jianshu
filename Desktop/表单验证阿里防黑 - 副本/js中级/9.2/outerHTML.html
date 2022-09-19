@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",function(){
+      var bt1=document.getElementById("bt1");
+      var div1=document.getElementById("div1");
+      bt1.onclick=function (){
+        div1.outerHTML="";
+      }
+    })
+  </script>
+</head>
+<body>
+<input type="button" id="bt1" value="删除div1">
+  <div id="div1">
+    <p>哈哈哈</p>
+    <a href="dsf.html">百度</a>
+  </div>
+
+</body>
+
+</html>

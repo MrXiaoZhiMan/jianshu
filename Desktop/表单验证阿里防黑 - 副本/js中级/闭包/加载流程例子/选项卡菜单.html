@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选项卡</title>
+        <style>
+            #div1 div{
+             height: 200px;
+             width: 200px;
+             border: 2px solid black;     
+             background-color: blue; 
+             display: none;          
+            }
+            #div1 span.active{
+                background-color: burlywood;
+            }
+        </style>
+        <script>
+            window.onload=function(){
+            var  div1=document.getElementById('div1');
+              var spans=div1.getElementsByTagName('span');
+             var divs=div1.getElementsByTagName('div');
+             for(var x=0;x<spans.length;x++){
+                spans[x].index=x;
+                spans[x].onclick=function(){
+                    for(var y=0;y<spans.length;y++){
+                        spans[y].className="";
+                        divs[y].style.display="none";
+                    } 
+                    this.className="active";
+                    divs[this.index].style.display="block"
+                } 
+                  
+               
+             }
+            }
+        </script>
+</head>
+<body>
+  <div id="div1">
+    <span>导航1</span>
+    <span>导航2</span>
+    <span>导航3</span>
+    <div style="display: block;">内容1</div>
+    <div>内容2</div>
+    <div>内容3</div>
+  </div>
+    
+</body>
+</html>

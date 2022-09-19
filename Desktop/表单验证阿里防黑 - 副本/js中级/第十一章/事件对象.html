@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        javaScript 事件对象
+        事件对象存储当前事件相关的属性及方法
+        1 事件对象得创建：事件对象实在出发事件的时候，由js解释器创建并赋值
+         行内绑定 
+         事件对象是处理函数里面得第一个形参
+         <div id='div1' onclick='tips()'></div>
+         原理div1.onclick = function onclick(event){
+            tips()
+         }
+
+         target 返回触发当前事件的dom对象 与this相同 但是this会在特定请款下
+         发生改变 所以用target
+         说明：ie678浏览器兼容性写法srcElement 
+
+         altKey 键盘alt返回true
+         target返回触发当前事件的对象
+         说明：ie678浏览器兼容性写法srcElement
+         type返回当前事件的名称
+         screenX鼠标指针的屏幕水平坐标
+         screenY 鼠标指针的屏幕水平座标
+         clientX 鼠标指针相对于窗口的水平座标，不包括
+         clientY 鼠标指针相对于窗口的垂直坐标
+
+          clientX和clientY 所有浏览器都支持
+          offsetX相对于对象区域的X坐标
+
+          
+一百零一：JavaScript事件类型
+
+1.	onload 加载事件
+--window对象
+--img DOM对象
+  2. onresize 改变尺寸事件
+3. 键盘鼠标相关事件:
+   --单击事件onclick   
+   --双击事件ondblclick  300ms
+   --卸载事件onunload
+   --鼠标左键按下onmousedown
+   --鼠标左键抬起onmouseup
+   --获取鼠标onmouseover
+   --失去鼠标onmouseout
+   --键盘按下onkeydown 键按下，文字还没有显示出来的时候就触发了-适合做游戏按键，按住会持续触发
+   --键盘抬起onkeyup：键抬起触发，不能持续触发
+   --按键盘onkeypress 类似onkeydown
+   --输入oninput 按下键，文字刚显示出来立即触发，持续触发
+4. 表单相关事件:
+   --改变事件onchange
+
+
+    onresize dom元素盒子发生大小变化时会触发事件
+    onmousemove 鼠标滑动的时候会连续触发事件
+    onkeypress 功能同onkeydown差不多一样的
+    onkeydown  
+onkeypress 和 onkeydown 是有区别，下面将讲解 onkeypress 与 onkeydown 事件的区别。 
+onkeypress 事件在用户按下并放开任何字母数字键时发生。但是系统按钮（例如：箭头键、功能键）无法得到识别。 
+onkeydown 事件在用户按下任何键盘键（包括系统按钮）时发生。 
+具体区别： 
+1. 一个放开一个没有放开，onkeydown 先于 onkeypress 发生。 
+2.onkeypress 无法系统按钮。 
+2.onkeydown 捕获的 keyCode 不区分字母大小，而 onkeypress 区分。 
+
+onkeypress是在用户按下并放开任何字母数字键时发生。系统按钮（例如，箭头键和功能键）无法得到识别。 
+onkeyup 是在用户放开任何先前按下的键盘键时发生。 
+onkeydown 是在用户按下任何键盘键（包括系统按钮，如箭头键和功能键）时发生。 
+   
+
+ oninput按下键 文字显示到文本框触发 适合统计字数及其他文本处理  一直按会持续触发
+
+
+   作业   onscroll到顶部   新浪微博字数统计 9-6下自习前交
+
+   eval
+   JavaScript中eval函数的用法 1. eval函数会计算传给的字符串
+   , 并把作为脚本代码来执行. eval (str) 此函数接受一个字符串
+   作为参数,并把str当做一段JavaScript脚本代码来执行,如果str
+   执行结果返回一个值则返回此值,否则返回undefined.
+    -->
+    <div class="div1">
+aaa
+    </div>
+</body>
+<script>
+    var div1 = document.querySelector('.div1')
+    div1.addEventListener('click',function(e){
+        console.log('e',e);
+        console.log('window.event',window.event);
+        var e = e || window.event;
+        console.log('e',e);
+    })
+</script>
+</html>

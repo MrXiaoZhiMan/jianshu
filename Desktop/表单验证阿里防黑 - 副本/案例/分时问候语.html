@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="morning">
+上午好
+    </div>
+    <button class="btn">
+  点击
+    </button>
+</body>
+<script>
+    var morning = document.querySelector('.morning');
+    var btn = document.querySelector('.btn')
+    var date = new Date();
+    var time = date.getTime(2022/8/25-6);
+    var h = time.getHours();
+    if(h<12){
+        morning.innerHTML = '上午好'
+    } else if(h<18){
+        morning.innerHTML = '下午好'
+    } else {
+        morning.innerHTML = '晚上好'
+    }
+</script>
+</html>

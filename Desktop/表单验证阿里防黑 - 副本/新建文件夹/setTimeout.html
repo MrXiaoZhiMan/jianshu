@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div {
+            width: 1000px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var div1 = document.getElementById('div1')
+            function showTime() {
+                var myDate = new Date();
+                var year = myDate.getFullYear();
+                year < 10 ? '0' + year : year;
+                // var month = myDate.getMonth() + 1;
+                var month =  myDate.getMonth() + 1 < 10 ? '0' + (myDate.getMonth() + 1) : myDate.getMonth() + 1;
+                var dater = myDate.getDate();
+                dater < 10 ? '0' + dater : dater;
+                var hour = myDate.getHours();
+                hour < 10 ? '0' + hour : hour;
+                var minutes = myDate.getMinutes();
+                myDate.getMinutes() < 10 ? '0' + myDate.getMinutes() : myDate.getMinutes();
+                var seconds =  myDate.getSeconds() < 10 ? '0' + myDate.getSeconds() : myDate.getSeconds();
+                
+                div1.innerText = year + '年' + month + '月' + dater + "日" + hour + ":"
+                    + minutes +':'+ seconds;
+            }
+            showTime();
+            setInterval(showTime, 1000);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="div1">
+
+    </div>
+</body>
+
+</html>

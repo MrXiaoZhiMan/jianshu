@@ -1,0 +1,115 @@
+<!-- 
+     
+
+  2.nodeValue
+ 
+3.nodeType
+ 
+  元素类型	节点类型	元素类型	节点类型
+元素	1	注释	8
+属性	2	文档	9
+文本	3		
+
+
+八十三、创建节点
+1.	在内存中创建DOM元素节点
+  var 元素节点对象=document.createElement(“标记名”);
+
+问题：新在内存中创建的元素节点，浏览器上默认是看不到的，怎么办？
+解决：将在内存中创建的元素节点，添加到已经渲染的DOM节点，引发浏览器重绘/重新渲染—看见
+ 
+
+2.	在内存中创建DOM文本节点
+var 文本节点=document.createNodeText(“文本”)
+ 
+ 
+
+
+八十四、appendChild(node)   
+1.	添加新节点 appendChild(新建节点) ；  到指定节点内部的后面 
+2.	移动原有节点 appendChild(原有节点) ；到指定节点内部的后面
+
+
+知识点：JavaScript最耗费性能的操作就是DOM重绘，1:4000
+
+
+八十五、insertBefore(要添加或移动的节点,参考节点)
+       1. 添加节点到当前节点内部的前面（新创建的节点）
+       2. 移动节点到当前节点内部的前面（已有节点）
+
+
+八十六、删除节点: 掌握
+        兼容性：IE不支持remove方法，所以为了兼容用outerHTML代替
+     
+八十七、删除子节点：removeChild(node)  掌握
+
+八十八、复制（克隆）节点  
+       1.cloneNode(true)  深拷贝—除了复制节点，还复制所有子节点及文 本节点
+       2.cloneNode(false)  默认浅拷贝—只复制节点
+
+八十九、替换节点:
+           replaceChild(新节点，要替换的节点)；
+
+九十、hasChildNodes()判断是否有子节点---判断是否是空节点—基本不用
+
+九十一、contains(节点)；判断是否包含某个节点
+
+
+
+
+
+
+
+
+重点内容：
+
+九十二、DOM对象的切换
+
+1.	切换到父节点:  parentNode   parentElement
+
+2.	切换到第一个子元素节点:
+          IE6-8:忽略回车 firstChild
+          IE9+ chrome firefox firstElementChild
+3.	切换到最后一个子元素节点:
+          IE6-8:忽略回车 lastChild
+          IE9+ chrome firefox lastElementChild
+
+4. 切换到子元素节点的集合: children
+
+5. 切换到下一个兄弟节点
+          IE6-8:忽略回车 nextSibling
+          IE9+ chrome firefox nextElementSibling
+6. 切换到上一个兄弟节点
+
+
+九十四、标记的属性分为两类：掌握
+1.	内置属性：既可以使用DOM对象.属性名进行操作
+              也可以使用
+--getAttribute(“属性名”) 获得节点属性
+          --setAttribute(“属性名”,”值”) 设置节点属性
+          --removeAttribute(“属性名”);删除节点属性
+         进行操作
+
+2.	用户自定义属性—HTML5规定以data-开头
+        只可以使用可以使用
+--getAttribute(“属性名”) 获得节点属性
+          --setAttribute(“属性名”,”值”) 设置节点属性
+          --removeAttribute(“属性名”);删除节点属性
+         进行操作
+
+
+
+         DOM 元素在文档中作为标签拥有 attribute 属性，而 JavaScript
+          的元素节点对象拥有 property 属性。其中 HTML 的标准属性
+          （即在标准中定义的属性），会自动成为元素节点对象的属性，
+          例如 id、class。标准属性也就是 js 对象的属性可以通过.获取
+          ，而自定义属性可以由操作属性的方法 getAttribute 获取。 
+          他们之间有区别，可以参看以下链接：
+
+          元素对象有一个attributes属性，返回一个类似数组的动态对象，
+          成员是该元素标签的所有属性节点对象，属性的实时变化都会反映
+          在这个节点对象上。其他类型的节点对象，虽
+          然也有attributes属性，但返回的都是null，因此可以把这个
+          属性视为元素对象独有的。
+
+ -->

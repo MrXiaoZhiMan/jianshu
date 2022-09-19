@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 800px;
+            height: 800px;
+            overflow: hidden;
+        }
+
+        .small {
+            float: left;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            /* background-color: #ff1122; */
+        }
+
+        .small img {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+
+        .big {
+            float: left;
+            width: 300px;
+            height: 300px;
+            /* background-color: #bcbcbc; */
+            overflow: hidden;
+        }
+
+        .zzc {
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 10px;
+            width: 150px;
+            left: 10px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="small">
+            <img src="./img/大图.avif" alt="">
+            <div class="zzc">
+            </div>
+        </div>
+        <div class="big">
+            <img src="img/小图.avif" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    var small = document.querySelector('.small');
+    var big = document.querySelector('.big');
+
+</script>
+
+</html>

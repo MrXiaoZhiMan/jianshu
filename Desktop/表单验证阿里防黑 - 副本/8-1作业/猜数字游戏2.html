@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+function getRandom(min,max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+}
+var random = getRandom(1,20)
+while(true){
+    var num =prompt('你来猜?输入1-10之间的一个数字');
+    if(num>random){
+        alert("你猜大了")
+    }else if (num<random){
+        alert('你猜小了')
+    }else {
+        alert('你猜对了，年年岁岁人不同 ');
+        break;
+    }
+}
+</script>
+</html>

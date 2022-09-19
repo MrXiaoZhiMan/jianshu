@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+    // onresize 会根据绑定的dom对象的尺寸大小的变化而触发事件
+    // 这里是绑定的window那么window窗口发生改变时就会触发里面的log
+    // window.onresize = function(){
+    //     console.log('你出发了onresize事件');
+    // }
+    window.onresize = function(){
+        if(window.innerWidth >800 && window.innerWidth<1000){
+            alert('这是2行')
+        }
+         if(window.innerWidth <= 800 ){
+            alert('这是一行')
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        //  javascript对象分为两类
+ // function 对象
+//   function对象都有一个内置属性prototype{}
+// prototype{}  叫做原型对象  他是构造器函数的自身属性（new一下才是构造器函数）
+// 2，object对象  
+// 每个object对象都有一个属性 ———proto———，始终等
+// 于对象的构造器函数的 prototype
+// Student.prototype === s1.__proto__  是正确的
+
+// 同类型对象：属性的值都不同---工厂模式创建
+// 方法和方法体完全相同--原型模式共享方法
+
+
+
+// 改造版
+function Student(name,age,sex){
+  // 工厂方式添加属性
+  this.name = name;
+  this.age = age;
+  this.sex = sex;
+
+}
+// 原型方式共享方法
+// {constructor:f}
+Student.prototype.study = function(){
+  alert('持之以恒')
+}
+// {constructor:f,study:f}
+// 使用构造器函数 (构造器函数也叫类)实例化对象
+// 通过类创建对象的过过程成为实例化过程intanceof
+var s1 = new Student('tom',19,'男')
+var s2 = new Student('jarry',20,'男')
+    </script>
+</head>
+<body>
+</body>
+</html>

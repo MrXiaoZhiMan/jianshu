@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            position: relative;
+            width: 450px;
+            height: 450px;
+            border: 1px solid #ccc;
+        }
+        .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: orange;
+            opacity: 0.3;
+            cursor: pointer;
+            display: none;         
+        }
+        .left {
+            position: absolute;
+            left: 460px;
+            top: 0;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            display: none;
+        }
+        .big{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+     <img src="./img/大图.avif" alt="">
+     <div class="mask"></div>
+    </div>
+    <div class="left">
+  <img src="./img/小图.avif" alt="" class="big">
+    </div>
+</body>
+<script>
+   var box = document.querySelector('.box');
+   var mask = document.querySelector('.mask');
+   var left = document.querySelector('.left');
+   box.addEventListener('mouseover',function(){
+    mask.style.display = 'block';
+    left.style.display = 'block';
+   })
+   box.addEventListener('mouseout',function(){
+    mask.style.display = 'none';
+    left.style.display= 'none';
+   })
+   box.addEventListener("mousemove", function (e) {
+        var x = e.pageX - box.offsetLeft
+        var y = e.pageY - box.offsetTop
+        var maskX = x - mask.offsetWidth / 2
+        var maskY = y - mask.offsetHeight / 2
+        var maskMax = box.offsetWidth - mask.offsetWidth
+        if (maskX <= 0) {
+            maskX = 0
+        } else if (maskX >= maskMax) {
+            maskX = maskMax
+        }
+        if (maskY <= 0) {
+            maskY = 0
+        } else if (maskY >= maskMax) {
+            maskY = maskMax
+        }
+        mask.style.left = maskX + "px"
+        mask.style.top = maskY + "px"
+        var big = document.querySelector(".big")
+        var imgMax = big.offsetWidth - left.offsetWidth
+        var imgX = imgMax*maskX / maskMax
+        var imgY = imgMax*maskY/ maskMax
+        big.style.left = -imgX + "px"
+        big.style.top = -imgY + "px"
+       
+    })
+</script>
+</html>

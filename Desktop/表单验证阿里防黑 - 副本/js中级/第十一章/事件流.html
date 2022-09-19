@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+      事件流分类
+      冒泡型事件流  （由内向外）  -- 常用
+      捕获型事件流  （由外向内）  -- 不常用
+
+      解决 IE9+ e.preventDefault();---jquery react vue
+           IE6-8  window.enent.returnValue= false;
+
+           事件流：祖先和后代元素绑定了同样的事件，事件触发顺序称为事件流
+
+           （1）冒泡型事件流：祖先和后代都绑定了同样的事件，当触发后代事件的时候
+           ，先触发后代的事件，然后按照由内而外的顺序触发祖先的事件--由内而外的触发顺序
+           称为冒泡型事件流
+           (2) 捕获事件流：由外向内的触发顺序称为捕获型事件流
+
+           DOM对象.addEventListener('事件名'，function（）{}，true)
+           默认的是false冒泡型事件流 改为true以后就变成捕获型事件流
+
+           ie678 只支持冒泡事件流
+
+           问题：开发中，不想向外冒泡，不想去触发祖先元素的事件
+           解决：组织向外冒泡 e.stopPropagation() //阻止冒泡
+
+           
+     -->
+</body>
+</html>

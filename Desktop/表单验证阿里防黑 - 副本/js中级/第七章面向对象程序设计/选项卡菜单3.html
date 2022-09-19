@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: #fff123;
+            display: none;
+        }
+
+        input.aaa {
+            background-color: #bcbcbc;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="按钮1">
+    <input type="button" value="按钮2">
+    <input type="button" value="按钮3">
+    <div class="div1" style="display:block" >年年岁岁花相似</div>
+    <div class="div1">岁岁年年人不同</div>
+    <div class="div1">3333333</div>
+</body>
+<script>
+    var inps = document.querySelectorAll('input');
+    var divs = document.querySelectorAll('.div1');
+    for (var i = 0; i < divs.length; i++) {
+       inps[i].index=i;
+        inps[i].onclick = function () {
+            for (var j = 0; j < divs.length; j++) {
+                inps[j].className = '';
+                divs[j].style.display = 'none';
+            }
+            this.className='aaa'
+            divs[this.index].style='display:block'
+        }
+    }
+</script>
+
+</html>

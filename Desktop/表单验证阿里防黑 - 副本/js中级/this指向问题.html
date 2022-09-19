@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body></body>
+  <script>
+    // var obj = {
+    //   name: "way",
+    //   running: function () {
+    //     console.log(obj.name + "running");
+    //   },
+    //   eating: function () {
+    //     console.log(obj.name + "eating");
+    //   },
+    //   studing: function () {
+    //     console.log(obj.name + "studing");
+    //   },
+    // };
+    // obj.eating();
+    // 当我们通过obj去调用running、eating
+    // 、studying这些方法时，this就是指向的obj对象
+
+//     var obj = {
+//       name: "why",
+//       running: function () {
+//         console.log(this.name + " running");
+//         console.log(this);
+//       },
+//       eating: function () {
+//         console.log(this.name + " eating");
+//       },
+//       studying: function () {
+//         console.log(this.name + " studying");
+//       },
+//     };
+//   obj.running()
+//   console.log(obj);
+
+
+// 定义一个函数
+// function foo() {
+//   console.log(this);
+// }
+
+// // 1.调用方式一: 直接调用
+// foo(); //直接调用指向window
+// // 2.调用方式二: 将foo放到一个对象中,再调用
+// var obj = {
+//   name: "why",
+//   foo: foo
+// }
+// obj.foo() // 用obj调用指向obj
+// console.log(obj);
+
+// // 3.调用方式三: 通过call/apply调用
+// foo.call("abc"); // String {"abc"}对象
+// 1.函数在调用时，JavaScript会默认给this绑定一个值；
+// 2.this的绑定和定义的位置（编写的位置）没有关系；
+// 3.this的绑定和调用方式以及调用的位置有关系；
+// 4.this是在运行时被绑定的；
+
+// 独立的函数调用我们可以理解成函数没有被绑定到某个对象上进行调用；
+// 案例一：普通函数调用
+
+// 该函数直接被调用，并没有进行任何的对象关联；
+// 这种独立的函数调用会使用默认绑定，通常默认绑定时，函数中的this指向全局对象（window）；
+// function foo() {
+//   console.log(this); // window
+// }
+
+// foo();
+// 案例二：函数调用链（一个函数又调用另外一个函数）
+
+// 所有的函数调用都没有被绑定到某个对象上；
+// // 2.案例二:
+// function test1() {
+//   console.log(this); // window
+//   test2();
+// }
+
+// function test2() {
+//   console.log(this); // window
+//   test3()
+// }
+
+// function test3() {
+//   console.log(this); // window
+// }
+// test1();
+// 案例三：将函数作为参数，传入到另一个函数中
+
+// function foo(func) {
+//   func()
+// }
+
+// function bar() {
+//   console.log(this); // window
+// }
+
+// foo(bar);
+// 我们对案例进行一些修改，考虑一下打印结果是否会发生变化：
+
+// 这里的结果依然是window，为什么呢？
+// 原因非常简单，在真正函数调用的位置，并没有进行任何的对象绑定，只是一个独立函数的调用；
+   
+// 我们通过obj2又引用了obj1对象，再通过obj1对象调用foo函数；
+// 那么foo调用的位置上其实还是obj1被绑定了this；
+// function foo() {
+//   console.log(this); // obj对象
+// }
+
+// var obj1 = {
+//   name: "obj1",
+//   foo: foo
+// }
+
+// var obj2 = {
+//   name: "obj2",
+//   obj1: obj1
+// }
+
+// obj2.obj1.foo();
+  </script>
+</html>

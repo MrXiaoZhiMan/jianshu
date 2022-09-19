@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // 闭包-1
+        //  在函数外部直接调用局部变量X,报错
+        // function test(){
+        //     var x =10;
+        //     return function() {
+        //         return x;
+        //     }
+        // }
+        // 调用局部变量x，报错未定义
+        // alert(x);
+        // 调用
+        // var a=test();
+        // alert(a());
+        // 说明：a实际上就是闭包匿名函数。函数test中的局部变量
+        //    x一直保存在内存中，并没有在test调用后被自动清除
+
+        function test(){
+            var a = 10;
+            return function (){
+                return a;
+            }
+        }
+       var x = test();
+        alert(x())
+        // 
+    </script>
+</head>
+<body>
+    <!-- 
+        1 闭包 - 1
+        在函数外部直接调用局部变量X,报错
+     -->
+</body>
+</html>

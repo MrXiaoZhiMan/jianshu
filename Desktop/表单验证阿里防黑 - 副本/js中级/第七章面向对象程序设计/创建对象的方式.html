@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // 创建对象的方法
+        // js对象直接创建方式
+        // 混合方式（通过构造器函数创建）
+    //    ( function test(x){
+    //         var secret = 0;
+    //      getValue = function () {
+    //      return '余额'+secret;
+    //         }
+    //         setValue = function (value) {
+    //             secret =value;
+    //         }
+    //     })();
+    //     // console.log(getValue());
+    //     setValue(100001);
+    //     console.log(getValue());
+    // 构造器函数 函数名首字母要大写 
+
+    function Students(name,age,sex) {
+        this.name = name;
+        this.age = age;
+        this.sex=sex;
+        this.eat = function (){
+            alert('持之以恒')
+        }
+    }
+    // console.log(Students('tom',20,'男'));
+    // console.log(Students.name);
+    var obj1 = new Students('tom',20,'男')
+  console.log(obj1);
+    // 混合模式创建对象
+    // 不使用工厂模式创建对象  就不是工厂模式创建对象  函数创建同类型对象
+    // 
+    // 提示 工厂--函数   形参 -- 原料入库   返回值 -- 成品出库
+    
+
+    // 
+    </script>
+</head>
+<body>
+</body>
+</html>

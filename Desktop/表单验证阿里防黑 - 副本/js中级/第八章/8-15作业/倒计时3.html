@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #b4e0dd;
+        }
+
+        .times {
+            background: url(img/timg.jpg) no-repeat;
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        .inp {
+            padding-top: 150px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .time2 {
+            position: absolute;
+            top: 260px;
+            left: 449px;
+            /* background-color: #bcbcbc; */
+        }
+
+        .time2 input {
+            width: 50px;
+            height: 50px;
+            opacity: 0.3;
+            text-align: center;
+        }
+
+        .inp input {
+            border: 1px solid #b4e0dd;
+            width: 60px;
+            height: 50px;
+            opacity: 0.3;
+            font-size: 18px;
+            color: #000;
+            text-align: center;
+        }
+
+        .inp span {
+            color: #445e8f;
+            font-size: 16px;
+        }
+
+        .time2 div {
+            color: #000;
+            font-size: 20px;
+            margin: 10px auto;
+        }
+
+        button {
+            position: absolute;
+            top: 400px;
+            left: 600px;
+            background-color: rgb(66, 135, 138);
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            border: 0;
+        }
+
+        #last {
+            width: 300px;
+            height: 300px;
+            background-color: #bcbcbc;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="times" id="times">
+        <div class="inp" id="inps">
+            <input type="text" value="2022" id="year">
+            <span>年</span>
+            <input type="text" value="8" id="month">
+            <span>月</span>
+            <input type="text" value="17" id="date">
+            <span>日</span>
+            <input type="text" value="0" id="hours">
+            <span>时</span>
+            <input type="text" value="0" id="minutes">
+            <span>分</span>
+            <input type="text" value="0" id="seconds">
+            <span>秒</span>
+        </div>
+    </div>
+    <div class="time2">
+        <div>倒计时还有</div>
+        <input type="text" value="" id="year1">
+        <span>年</span>
+        <input type="text" value="" id="month1">
+        <span>月</span>
+        <input type="text" value="" id="date1">
+        <span>日</span>
+        <input type="text" value="" id="hours1">
+        <span>时</span>
+        <input type="text" value="" id="minutes1">
+        <span>分</span>
+        <input type="text" value="" id="seconds1">
+        <span>秒</span>
+    </div>
+    <button id="btn">倒计时开始</button>
+</body>
+<script>
+    function test(_id) {
+        return document.getElementById(_id)
+    }
+    var btn = test('btn');
+    // 获取输入的时间
+    var year = test('year');
+    var dater = test('date');
+    var month = test('month');
+    var hours = test('hours');
+    var minutes = test('minutes');
+    var seconds = test('seconds');
+    // 获取倒计时输入框
+    var year1 = test('year1');
+    var month1 = test('month1');
+    var date1 = test('date1');
+    var hours1 = test('hours1');
+    var minutes1 = test('minutes1');
+    var seconds1 = test('seconds1');
+    function timer() {
+        // 获取现在的时间
+        var date = new Date();
+        // 转换为时间戳
+        var showTime = date.getTime();
+        console.log(showTime);
+        // 获取输入的时间
+        var inpTimer = year.value + '-' + month.value + '-' + dater.value + '  ' + hours.value + ':' + minutes.value + ':' + seconds.value
+        // console.log(inpTimer);
+        // z转换为正常时间
+        var inpNewTime = new Date(inpTimer);
+        // console.log(inpTimer);
+        var inpTimerss = inpNewTime.getTime();
+        var minusTime = inpTimerss - showTime;
+        console.log(minusTime);
+        if (minusTime > 0) {
+            year1.value = Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24 / 30 / 12)) < 10 ? '0' + Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24 / 365)) : Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24 / 365));
+            month1.value = Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24 / 30)) < 10 ? '0' + Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24 / 30)) : Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24 / 30));
+            date1.value = Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24)) < 10 ? '0' + Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24)) : Math.floor(parseInt(minusTime / 1000 / 60 / 60 / 24));
+            hours1.value = Math.floor(parseInt(minusTime / 1000 / 3600) % 24) < 10 ? '0' + Math.floor(parseInt(minusTime / 1000 / 60 / 60 % 24)) : Math.floor(parseInt(minusTime / 1000 / 60 / 60 % 24));
+            minutes1.value = Math.floor(parseInt(minusTime / 1000 / 60) % 60) < 10 ? '0' + Math.floor(parseInt(minusTime / 1000 / 60 % 60)) : Math.floor(parseInt(minusTime / 1000 / 60 % 60));
+            seconds1.value = Math.floor(parseInt(minusTime / 1000 % 60)) < 10 ? '0' + Math.floor(parseInt(minusTime / 1000 % 60)) : Math.floor(parseInt(minusTime / 1000 % 60));
+        } else if (minusTime <= 0) {
+            year1.value = 0;
+            month1.value = 0;
+            clearInterval(timer)
+         
+        }
+        if (minusTime < parseInt(minusTime / 1000 / 60 / 60 / 24 / 30) || month1.value < minusTime / 1000 / 60 / 60 / 24 / 30 ){
+            year1.value = 00;
+            month1.value = 00;
+        }
+        if ( hours1.value<minusTime/1000/60/60){
+            year1.value = 00;
+            month1.value = 00;
+        }
+        minusTime--;
+        // console.log(minusTime);
+    }
+    timer();
+    btn.onclick = function () {
+        setInterval(timer, 1000)
+    }
+</script>
+
+</html>

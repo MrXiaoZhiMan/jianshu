@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <!-- 
+    链表和数组一样，可以用来存储一些列的元素，但是链表和数组的实现机制完全不同，
+    数组：
+    要存储多个元素，数组（或称为列表）可能是最常用的数据结构，
+    我们之前说过，几乎每一种编程语言都有默认实现数组结构
+    但是数组也有很多缺点：
+    数组创建通常需要申请一段连续的内存空间（一整块的内存），并且大小是固定的（大多数编程语言数组都是固定的
+    ），所以当当前数组不能满足容量需求时，需要扩容，（一般请款下时申请一个更大的数组，比如两倍，然后将
+    原数组中的元素复制过去）
+    而且在数组的开头或中间位置插入数据的成本很高，需要进行大量的元素的位移
+    尽管我们已经学过的javaScript的Array类方法可以帮我们做很多事情，但是背后的原理依然是这样
+
+    要储存多个元素另外一个选择就是链表
+    但不同于数组，链表中的元素咋内存中不必是连续的空间
+    链表的每个元素由一个存储元素本身的节点和一个指向下一个元素的引用（有些语言称为指针或者链接）组成
+
+    相对于数组，链表有一些优点：
+    内存空间不是必须连续的，可以充分利用计算机的内存，实现灵活的内存动态管理
+    链表不必在创建的时候就确定大小，并且大小可以无限的延申下去
+    链表在插入和删除数据的时候，时间复杂度可以达到0（1），相对数组效率高很多
+
+    链表的常见操作
+    append(element):向列表尾部添加一个新的项
+    insert(position,element):向列表的特定位置插入一个新的项
+    get(position):获取对应位置的元素
+    indexOf(element):返回元素在列表中的索引。如果列表中没有该元素则返回-1
+    update(position):修改某个位置的元素
+    removeAt(position):从列表的特定位置移除一项
+    remove(element):从列表中移出一项
+    isEmpty():如果链表中不包含任何元素返回true，如果链表长度大于0则返回false
+    size():返回链表包含的元素个数。与数组的length属性类似
+    toString():由于列表项使用了Node类，就需要重写继承javaScript
+    对象默认的toString方法，让其只输出元素的值
+   -->
+</body>
+<script>
+    function LinkedList(){
+    //   添加属性
+    function Node(data){
+     this.data = data;
+     this.next = null;
+    }  
+    this.head=null;
+    this.length = 0;
+    console.log(this);
+    // 追加方法
+    LinkedList.prototype.append = function(data){
+      // 判断是否添加的是第一个节点
+      var newNode = new Node(data)
+  if(this.length == 0){
+   this.head = newNode
+  }else{
+     var current= this.head;
+     while(current.next){
+      current = current.next
+     }
+     current.next = newNode
+  }
+  this.length +=1;
+    }
+          }
+        // var obj={
+        //   ff:function(){
+        //     console.log(this);
+        //   }
+        // };
+
+//    function foo()
+// {
+//   console.log(this);
+// }  
+// foo()
+// LinkedList.call('abc')
+      // var AAA = new  LinkedList()
+      // AAA.append('hhhh')
+      // AAA.append('hhhh2')
+      // AAA.append('hhhh3')
+      // console.log(AAA);
+     
+
+
+var obj ={
+  name:"tom",
+  foo:function(){
+     alert("123")
+     console.log(this);
+  }
+}
+   var me=obj.foo.bind("123")
+   me() // >
+  //  obj.foo是找到obj里面的方法 
+  //  obj.foo.bind('123') 是找到里面的方法 并改变里面的this指向但是不会调用
+
+
+
+// obj.foo();//
+// function bar (){
+//   console.log(this);
+// }
+// bar() //独立调用
+// bar.call("123"); //显示
+// bar.apply(123);  //number
+ function foo(){
+ console.log(this); 
+}
+var obj={
+  age:13,
+  bar:function(){
+    console.log(this);// 
+    return foo;
+  }
+}
+// obj.bar.bind("123")().bind(123)()
+
+
+//    var name= obj.bar();
+//  name()
+// //obj.bar() ---- foo
+// //foo()
+// foo()
+
+
+
+</script>
+</html>

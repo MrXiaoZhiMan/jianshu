@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            margin-left: 20px;
+            width: 50px;
+        }
+        div{
+            margin: 5px 20px;
+            width: 300px;
+            height: 300px;
+            background-color: #bcbcbc;
+            position: absolute;
+            display: none;
+        }
+        .bgc{
+background-color: #09f;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="tap1">
+    <div class="content" id="tap1" style="display:block">11</div>
+    <input type="button" value="tap2">
+    <div class="content" id="tap2">22</div>
+    <input type="button" value="tap3">
+    <div class="content" id="tap3">33</div>
+    <input type="button" value="tap4">
+    <div class="content" id="tap4">44</div>
+</body>
+<script>
+  var divs = document.querySelectorAll('div');
+  var  btns = document.querySelectorAll('input')
+function addEvent(elem, eventype, fun) {
+    try {
+        if (elem != null && typeof elem == "object") {
+            if (window.addEventListener) {
+                elem.addEventListener(eventype, fun);
+            } else {
+                elem.attachEvent("on" + eventype, fun)
+            }
+        } else {
+            throw new Error("对象不能为空");
+        }
+
+    } catch (error) {
+        alert("error.message");
+    }
+}
+
+for(var i =0;i<btns.length;i++){
+    addEvent(btns[i],'click',function(){
+        for(var j = 0 ; j<btns.length;j++){
+            // 如果这里的btns改为this是不行的 因为this指向的是触发事件的dom对象
+            // 而在触发之前会先进行绑定 那么for里面的j就变成了最后的值
+            btns[j].style.backgroundColor='';
+            divs[j].style.display = 'none'
+        }
+        this.style.backgroundColor = 'pink';
+        this.nextSibling.nextSibling.style = 'display:block'
+    })
+}
+
+
+</script>
+</html>

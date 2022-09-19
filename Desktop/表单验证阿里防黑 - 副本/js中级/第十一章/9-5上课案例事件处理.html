@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!-- 
+        事件：窗体，对象，鼠标动作成为事件
+        事件的驱动过程
+        首先：在这个对象上绑定这个事件
+        其次：又在这个对象上，触发了这个事件
+        最后：系统（js解释器）自动调用这个处理函数进行响应
+
+
+        获取事件  绑定事件 触发事件
+        行内绑定时 在欲编译阶段会自动创建一个函数 然后自动调用我们自己写的函数 并不是直接在 行内绑定直接调用触发的
+        for循环是在绑定事件就执行了而  触发事件时  是第二阶段 所以获得的值是for循环结束的值
+        div.addEventListener('click',fucntion(){}[事件流 冒泡false  捕获true])
+        谷歌 火狐、里面没有attachEvent 因为 是 ie678 支持attachEvent 
+
+        -[1,] 这个在标准浏览器中是 -1  ie678 是NaN
+
+
+        js事件是一种触发到响应的机制；事件三要素相信大家都耳熟能详:
+
+1、事件源（用谁去触发这个事）
+一般为名词，即事件的发起者
+谁去干?
+2、事件（如何发生这件事）
+一般为动词，如鼠标经过，点击后，按键盘等
+何时干?
+3、事件处理程序（响应发生了什么事）
+干什么?
+     -->
+    <div onclick="tips();tips2()">dfghjk</div>
+  </body>
+  <script>
+    // var div = document.querySelector("div");
+    // function addevent(elem,eventType,func){
+    //     try{
+    //    if(elem && typeof elem == 'object'){
+    //     if(window.addEventListener(eventType,func)){
+    //         elem.addEventListener(eventType,func)
+    //     }else{
+    //         elem.attachEvent(eventType,func)
+    //     }
+    //    }else{
+    //     throw new Error('不是对象或为空');
+    //    }
+    //     }catch(error){
+    //       alert('error.message')
+    //     }
+    // }
+    var div1 = document.querySelector('div');
+    div1.addEventListener('click',a=function(){
+        alert('f1');
+    })
+    div1.addEventListener('click',b=function(){
+        alert('f2');
+    })
+  </script>
+</html>

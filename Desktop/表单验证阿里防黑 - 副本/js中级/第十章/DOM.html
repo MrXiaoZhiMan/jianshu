@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+     
+        DOM 文档对象模型  js操作heml得一个工具
+        特点 ： 通过dom可以对整个HTML文档进行新建，添加，更新，删除等操作
+        DOM模型符合WEB标准，兼容性好
+        通过DOM可以操纵HTML,XHTML,XML文档 XML文档是前后端交互的
+        
+        HTML 中得每一个元素都是一个节点对象，DOM中规定如下：
+        整个文档是一个文档节点
+        每个html标签是一个元素节点
+        包含在html元素中得文本是文本节点
+        每一个html属性是一个属性节点
+        注释属于注释节点
+        HTML是根元素节点
+
+        页面加载流程分为两个阶段
+        第一个阶段
+          从上到下，依次创建每个标记的DOM对象，遇到js执行js
+        第二个阶段
+          从上到下，依次渲染每个标记，之后触发window.onload事件
+
+          当我们看到这个标签的时候 这个dom早在第一阶段已经创建了
+        
+          DOM是混合模式创建的 因为他的方法和属性在原型上共享 绝大多数浏览器 会把标记id得值当作dom对象的名称
+          每个标记都有一个对应的dom对象
+           javaScript修改html流程
+          javaScript -> DOM对象 -> 自动修改HTML文档 得标记
+        HTML文档改变 -> DOM对象自动改变 -> jabaScript (javascript可以看到被修改后的)
+     
+        DOM的根对象是document
+
+         DOM节点属性 与 DOM元素节点属性不同 元素节点属性有5中
+
+         DOM
+         （1）节点名称
+          元素节点得nodeName是标签得名称
+          属性节点的nodeName是属性的名称（获取属性节点对象名.attributes[下标]
+          文本节点得nodeName永远都是#text
+          文档节点的nodeName永远都是#document
+          （2）nodeValue节点值
+          对于文本节点，nodeValue属性包含文本
+          对于属性节点，nodeValue属性包含属性值
+          nodeValue属性对于文档节点和元素节点是不可用的（null）
+
+          创建节点 
+          createElement 创建一个元素节点
+          createTextNode 创建一个文本节点
+          （1）在内存中创建DOM元素节点
+          var 元素节点对象 = document.createElement('标记名')
+          问题 ：新在内存中创建的元素节点，浏览器上默认看不到，怎么办
+          解决：将在内存中创建的元素节点， 添加到已经渲染的DOM节点，引发浏览器重绘/重新渲染  -- 看见
+           
+          （2）在内存中创建DOM文本节点  文本节点是大括号对象
+           var text(文本节点) = document.createTextNode('aaa')     
+            text.appendChild(text)
+
+            添加节点
+            appendChild（node）
+            添加新节点  appendChild（新建节点） 原来没有这个节点是添加节点
+            移动原有节点  appendChild（原有节点） 原来有这个节点是移动节点
+
+             insertBefore(p,p1); 将p添加到p1得前面   如果p有这个
+             DOM对象 那么就是移动到p1得前面
+
+             删除节点
+             remove() 删除当前节点IE不支持 -- 使用outerHTML代替
+             removeChild(node) 删除节点
+
+             复制（克隆）节点
+             cloneNode(true)深拷贝--除了复制节点，还复制了所有子节点及文本
+             cloneNode(false)默认浅拷贝 -- 只复制节点
+
+             替换节点
+             repalceChild(新节点，被替换的节点)
+             判断节点是否有子节点
+             hasChildNodes()判断是否有子节点
+             是否包含某节点
+             contains()判断是否包含某节点
+        -->
+        <div class="div1">
+          <span class="span1">nihao1</span>
+        </div>
+</body>
+<script>
+  var div1 = document.querySelector('.div1');
+  var p = document.createElement('p')
+  p.innerText='我是帅哥';
+  div1.appendChild(p)
+  console.log(div1);
+  div1.firstElementChild
+</script>
+</html>

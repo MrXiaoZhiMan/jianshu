@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        var str = '知识改变命运'
+        str.substr(2，4)
+        得到的是  '改变'
+        str.slice(2,4)
+        得到的是  '改变'  从下标是2的字符截取到4前面那个
+        第一位数是起始位置 第二位数是 截取几个 但不包括截取数值的最后一个
+        两个值可以是负的值
+        str.substring(2,4) 与slice 相同
+        str.slice(2,4)从下表是2的开始截取 截取四个字符 得到的是 ’改变命运‘
+
+        join将数组转换为自符串
+        split 将数组转换位数组
+        slice也可以用于数组的方法 与自符串一样的规则  就是换成了数组
+
+        sort数组排序
+        （1） 对字符串排序  数组对象sort（）
+        （2）对数值排序 数组对像.sort（比较大小的回调函数）
+        var arr = ['tom','jarry','atom']
+        arr.sort()  会以开头字母的顺序排列abcdefg
+         function px(){
+            if(x>y){return 100}
+            if(x<y){return -100}
+            if(x===y){return 0}
+         }
+           sort 也是变异方法  变异方法直接改变数组 非变异不会直接改变数组 需要有个变量接受到
+
+         splice(起始位置，删除长度，插入的元素) 数组方法
+         原有数组会发生改变 是变异方法
+         能删 能改还能插
+
+         数组对象最重要的方法
+        （1） 数组遍历方法：将数组元素一个一个拿出来处理
+         数组对象.map(function(value,index){
+            代码
+            返回新元素
+         })
+      
+        （2） 删除不要的数组元素
+        var arr = [’语文‘，'数学','历史']
+        var arr2 = arr.filter(function(value,index){
+            if(value='历史'){
+                return ”选修“；
+            }
+        })
+    -->
+</body>
+<script>
+    var arr = ['green','blue','red','orange'];
+    var arr2 = arr.filter(function (value,index){
+        return value !='green' && value !='blue'})
+    console.log(arr2);
+    //  var str = {}
+</script>
+</html>

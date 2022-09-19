@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+       }
+       #banner{
+        width: 800px;
+        height: 400px;
+        overflow: hidden;
+       }
+       #imglist{
+        width: 3200px;
+        height: 400px;
+       }
+       #imglist img{
+        width: 800px;
+        height: 400px;
+
+       }
+       #imglist li{
+        float: left;
+       }
+    </style>
+</head>
+<body>
+    <div id="banner">
+     <ul id="imglist">
+    <li> <img src="./img/1.jpg" alt=""> </li>
+    <li><img  src="./img/2.jpeg" alt=""> </li>
+    <li><img  src="./img/3.jpg" alt=""> </li>
+    <li><img  src="./img/4.jpg" alt=""> </li>
+    <!--  -->
+    <li><img  src="./img/1.jpg" alt=""> </li>
+    
+     </ul>
+    </div>
+</body>
+<script>
+    var timer;
+    var lefte=0;
+    function run(){
+        var imglist = document.querySelector('#imglist');
+        imglist.style.marginLeft = lefte + ' px'
+        lefte = lefte - 10;
+        timer = setTimeout(run,10)
+        if(lefte <= 3200){
+            lefte = 0
+        }
+        var n = (lefte % 800 == 0)? n = 1200:10;
+    }
+</script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .navi {
+            background-color: rgb(62, 223, 41);
+        }
+        .navi input {
+            background-color: rgb(110, 119, 240);
+            border: 0;
+            outline: 0;
+            height: 22px;
+            line-height: 24px;
+            width: 35px;
+            border-radius:5px ;
+        }
+
+        .navi ul li {
+            float: left;
+            height: 24px;
+            line-height: 24px;
+            list-style: none;
+            padding: 10px 10px;
+            font-size: 13px;
+        }
+        .navi ul li:hover {
+            color: #4e6ef2;
+            cursor:pointer;
+        }
+        .navi ul li input:hover{
+            background-color: rgb(135, 220, 231);
+            color: #fff;
+        }
+
+        .image {
+            text-align: center;
+
+        }
+
+        .set {
+            margin-left: 58%;
+        }
+        .searcher {
+            text-align: center;
+            height: 44px;
+        }
+        .searcher input{
+            width: 550px;
+            height: 44px;
+            line-height: 44px;
+            padding-left: 10px;
+            border: 1px solid #bcbcbc;
+            border-right:0 ;
+            outline: none;
+            border-radius: 10px 0 0 10px;
+        }
+        .searcher .inp2 {
+            width: 108px;
+            height: 46px;
+            line-height: 44px;
+            margin-left: -6px;
+            border: 1px solid #bcbcbc;
+            border-radius: 0 10px 10px 0;
+            background-color: #4e6ef2;
+        }
+        .fonter {
+            width: 668px;
+            margin: 10px auto;
+            font-weight: 700;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="navi">
+        <ul>
+            <li>新闻</li>
+            <li>hao123</li>
+            <li>地图</li>
+            <li>贴吧</li>
+            <li>视频</li>
+            <li>图片</li>
+            <li>网盘</li>
+            <li>更多</li>
+            <li class="set">设置</li>
+            <li> <input type="submit" value="登录"></li>
+        </ul>
+    </div>
+    <div class="image">
+    <img src="images/baidu.png" alt="" width="300px">
+    </div>
+    <div class="searcher">
+        <input type="text">
+        <input type="button" value="百度一下" class="inp2">
+    </div>
+    <div class="fonter">
+       <span>百度热搜</span>
+       
+    </div>
+</body>
+
+</html>

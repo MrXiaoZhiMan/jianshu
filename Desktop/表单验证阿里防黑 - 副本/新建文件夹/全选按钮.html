@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        div {
+            width: 1000px;
+        }
+        ul {
+            text-align: center;
+            margin-top: 100px;
+        }
+        ul li {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><input type="checkbox"  id="liOne" >青春哪有不遗憾</li>
+            <li><input type="checkbox" name="inp">青春哪有不遗憾</li>
+            <li><input type="checkbox" name="inp">青春哪有不遗憾</li>
+            <li><input type="checkbox" name="inp">青春哪有不遗憾</li>
+            <li><input type="checkbox" name="inp">青春哪有不遗憾</li>
+        </ul>
+    </div>
+</body>
+<script>
+ 
+
+
+
+
+
+
+
+
+    // 全选和取消全选做法，让下面所有复选框的checked属性（选中状态）跟随 全选按钮即可
+    // 获取元素
+    // var lione = document.getElementById('liOne');
+    // var liall = document.getElementsByName('inp')
+    // lione.onclick = function () {
+    //     //  console.log(this.checked);
+    //     for (var i = 0 ; i < liall.length; i ++ ) {
+    //         liall[i].checked = this.checked;
+    //     }
+    // }
+    // // 复选框全局选中 上面才能选中做法 给下面所有复选框绑定点击事件 每次点击都循环判断别的按钮
+    // // 是否被选中
+    //  for (var i = 0 ; i < liall.length; i ++) {
+    //    liall[i].onclick = function () {
+    //       var flag = true;
+    //     //    每次点击下面的复选框都要循环检查这四个小按钮是否被选中
+    //        for(var i = 0 ; i < liall.length; i ++ ){
+    //         //    刚开始默认的checked是false 点击意思就是true那么里面取反就是true
+    //            if(!liall[i].checked){
+    //             flag = false;
+    //            }
+    //        }
+    //        lione.checked = flag;
+    //    }
+    //  }
+
+
+
+
+
+
+
+
+
+
+ var liOne = document.getElementById('liOne');
+ var inp = document.getElementsByName('inp');
+ liOne.onclick = function () {
+    for(var i = 0 ; i < inp.length;i++) {
+        inp[i].checked = this.checked;
+    }
+ }
+ for(var i = 0 ; i < inp.length;i++){
+ inp[i].onclick = function (){
+    var flag = true;
+    for (var i = 0 ;i <inp.length;i++) {
+        if(!inp[i].checked){
+        flag = false;
+        }
+    }
+    liOne.checked = flag;
+ }
+}
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <script>
+        window.onload = function () {
+         var out = document.getElementById('out');
+         var x = 3;
+        var sj = setInterval(function() {
+            out.innerText = x--;
+            if(x == -1){
+                clearInterval(sj);
+                location.href = "http://www.baidu.com";
+            }
+         },1000) 
+        }
+    </script>
+</head>
+<body>
+    <div id="setintervaler">
+      倒计时 <span id="out">4</span> 秒钟
+    </div>
+</body>
+</html>

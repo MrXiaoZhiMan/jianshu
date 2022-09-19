@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .int{
+            width: 100px;
+            height: 100px;
+            background-color: #09f;
+        }
+    </style>
+</head>
+<body>
+    <div class="int"></div>
+</body>
+<script>
+    var div1 = document.querySelector('.int');
+    var t=0,b=50,c=500,d=1000,speed=1;
+    function run(){
+        div1.style.top = Math.ceil(Tween.Elastic.easeOut(t,b,c,d))+'px';
+    if(t<d){t=t+speed;setInterval(run,10);}
+    run();
+  }
+
+</script>
+</html>

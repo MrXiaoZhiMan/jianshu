@@ -1,0 +1,113 @@
+html,
+body {
+    margin: 0;
+    /* padding: 0; */
+    height: 100%;
+    width: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* 意思是：当屏幕的宽度大于640px，应用style.css文件。 */
+@media screen and (min-width:640px) {
+    .wrap {
+        width: 640px;
+    }
+}
+
+/* 显示栏大盒子 */
+.show-panel {
+    width: 100%;
+    height: 30%;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 算数盒子样式 */
+.show-panel-box {
+    width: 100%;
+    font-size: 30px;
+    text-align: right;
+    /* 超出此行宽度后自动换行 */
+    word-wrap: break-word;
+}
+
+/* 的数盒子 */
+.show-ds {
+    font-size: 26px;
+    /* 超出盒子范围文字自动换行 */
+    word-wrap: break-word;
+    text-align: right;
+}
+
+/* 按钮栏大盒子 */
+.btn-panel {
+    width: 100%;
+    height: 70%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+/* 上面得两个按钮 */
+.top-btn {
+    /* 在设置display:flex,justify-content: space-betweend的时候，
+    它会把子元素靠边对齐平均分剩余的空间。 */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 15%;
+}
+
+.top-btn a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items中的items指的是flex 中的子项，因此align-items指的就是flex子
+    项们相对于flex容器在垂直方向上的对齐方式
+    。 2、适用于所有的flex容器，单行时候垂直居中使用align-items: center。 */
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    width: 49.35%;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+}
+
+.bom-btn {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: row;
+    flex-flow: wrap;
+    /* 两个盒子两边对齐 */
+    justify-content: space-between;
+    /* 两边各自剧中对其 */
+    align-items: center;
+    margin-top: 1%;
+}
+
+.bom-btn a {
+    display: flex;
+    width: 24%;
+    height: 24%;
+    text-decoration: none;
+    font-size: 30px;
+    /* 在display: flex; 布局中 中center：
+弹性项目居中紧挨着填充。（如果剩余的自由空间是负的，则弹性项目将在两个方向上同时溢出）。*/
+    justify-content: center;
+    /* display: flex; 布局中 会在垂直方向剧中 */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    color: #fff;
+}

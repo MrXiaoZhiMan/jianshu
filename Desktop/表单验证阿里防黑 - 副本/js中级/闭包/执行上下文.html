@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        　　首先，在javascript中的每个函数都是对象，是Funtion对象的一个实例
+        ，而Funtion中有一系列仅供javascript引擎存取的内部属性，其中一个便是
+        [[scope]]，它包含了一个函数被创建的作用域中对象的集合，这个集合就是
+        函数的作用域链。当一个函数创建后，它的作用域链会被创建此函数的作用域
+        中可访问的数据对象填充。例如定义下面这样一个函数：
+
+　　function add(num1,num2){
+　　　var sum = num1+num2;
+
+　　　return sum;
+
+　　}
+
+        函数add的作用域将在执行时候用到，假设var  total = add(5,10);
+        执行此函数会创建一个称为执行上下文的内部对象，一个执行上下文定义
+        了一个函数执行时的环境，函数每次执行时对应的执行上下文都是独一无
+        二的，所以多次调用统一个函数会导致创建多个执行上下文，当函数执行
+        完毕，执行上下文被销毁。每个执行下文都有自己的作用域链，用于标识
+        符解析，当执行上下文被创建时，它的作用域链初始化为当前运行函数的
+        [[Scope]]所包含的对象。这些值按照它们出现在函数中的顺序被复制到
+        运行期上下文的作用域链中。它们共同组成了一个新的对象，叫“活动对象
+        (activation object)”，活动对象作为函数运行期的可变对象，该对象
+        包含了函数的所有局部变量、命名参数、参数集合以及this，即它通过函
+        数的arguments属性初始化，arguments属性的值是Arguments对象：
+
+     -->
+</body>
+</html>

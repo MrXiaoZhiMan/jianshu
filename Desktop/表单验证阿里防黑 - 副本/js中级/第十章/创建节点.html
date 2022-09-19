@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        创建节点
+        createElement()创建一个元素节点，DOM对象
+        createTextNede() 创建一个文本节点
+        添加节点 
+        appendChild(node)
+        添加节点到当前节点内部的后面(新创建的节点)
+        移动节点到当前节点内部的后面(已有节点)
+        insertBefore(要添加或移动的节点，参考节点)
+        添加节点到当前节点内部的前面（新创建得节点）
+        移动节点到当前节点内部的前面（已有节点）
+
+        创建节点
+        在内存中创建DOM元素节点  是看不见得
+        var 元素节点对象 = document.createElement('标记名')
+
+        问题 ： 新创建的元素节点，浏览器上默认是看不到的，怎么办？
+        解决：将在内存中创建得元素节点添加到已经渲染的DOM节点
+        引发浏览器重绘/重新渲染  --  看见
+     -->
+     <div class="div1">
+    <p>多年以后你会发现什么是真</p>
+     </div>
+     <button>点击添加元素</button>
+</body>
+   <script>
+    var div1 = document.querySelector('.div1');
+   var btn = document.querySelector('button');
+   btn.onclick =function(){
+    var p = document.createElement('p')
+    p.innerText='你好'
+      div1.appendChild(p)
+      var p = document.createElement('p');
+      p.innerText='青春已经回不来';
+      var p = document.createElement('p');
+      p.innerText='山河灿烂，无一是你,无一不是你';
+      div1.appendChild(p)
+   }
+   </script>
+</html>

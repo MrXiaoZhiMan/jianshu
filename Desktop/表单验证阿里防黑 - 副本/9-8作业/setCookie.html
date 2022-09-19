@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+		//在cookie 中添加 
+        function setCookie(key, value, day) {
+            var myDate = new Date();
+            var timer = myDate.getTime() + day * 24 * 1000 * 3600;
+            myDate.setTime(timer);
+            var data = key + "=" + encodeURI(value);
+            document.cookie = data + "; expires=" + myDate.toUTCString();
+
+        }
+		//通过key 获取 cookie 中的值
+		        function getCookie(key) {
+		            var cookies = document.cookie.split("; ");
+		            for (var i in cookies) {
+		                var data = cookies[i].split("=");
+		                var name = data[0];
+		                var value = data[1];
+		            }
+		            if (name == key) {
+		                return key + ":" + decodeURI(value);
+		            }
+		            return key + "值不存在";
+		        }  
+				//删除某一个 变量值
+				  function delCookie(key) {
+				            var myDate = new Date();
+				            var timer = myDate.getTime() - 1000;
+				            myDate.setTime(timer);
+				            document.cookie = key + "= + ' '; expires=" + myDate.toUTCString();
+				        }
+              //删除所有的变量值
+              function allDelCookie() {
+				var myDate = new Date();
+				var timer = myDate.getTime() - 1000;
+				myDate.setTime(timer);
+                var cookies = document.cookie.split("; ");
+                for (var i in cookies) {
+                var data = cookies[i].split("=");
+                var value = data[1];
+				value=" "
+              document.cookie = data[0] + "=" + value+"; expires=" + myDate.toUTCString();
+            }
+        }
+        // function setCookie(key, value, day) {
+        //     //准备变量=值  数据
+        //     var data = key + "=" + encodeURI(value);
+        //     //获取当前日期和时间
+        //     var myDate = new Date();
+        //     //获得n day后的时间戳
+        //     var msnday = myDate.getTime() + day * 24 * 3600 * 1000;
+        //     //用时间戳设置日期对象得到day天以后日期和时间
+        //     myDate.setTime(msnday);
+        //     //添加cookie变量
+        //     document.cookie = data + "; expires=" + myDate.toUTCString();
+        // }
+        setCookie("x", "小红", 10);
+      
+
+
+        function allCookiesdel(key,value,datee){
+         var date = new Date();
+         var timer = date.getTime()-1000;
+         date.setTime(timer);
+         var cookies = document.cookie.split('; ')
+         for(var i in cookies){
+          var keys = cookies[i].split('=');
+         var value = keys[1];
+         value = '';
+         document.cookie = keys[0]+ '='+value+";expires="+date.toUTCString()
+         }
+
+        }
+    </script>
+	</body>
+</html>

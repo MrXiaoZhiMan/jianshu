@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>敏感词替换</title>
+ <style>
+.class1 {
+ display: block;
+ margin-left: 150px;
+}
+ </style>
+</head>
+
+<body>
+ <textarea name="输入" id="t1" cols="50" rows="10"></textarea>
+ <div class="class1">
+ <button class="submit">提交</button>
+ <button class="clc">清除</button>
+ </div>
+ <div class="talk
+ </div>
+ <script>
+var regexp=/傻|马|狗|/g
+var t1=document.getElementById('t1');
+var sub=document.querySelector('.submit');
+var clc=document.querySelector('.clc');
+var talk=document.querySelector('.talk');
+clc.addEventListener('click',function(){
+ t1.value='';
+ talk.innerHTML='';
+})
+sub.addEventListener('click',function(){
+ talk.innerHTML=t1.value.replace(regexp,'*')
+})
+ </script>
+</body>
+
+</html>

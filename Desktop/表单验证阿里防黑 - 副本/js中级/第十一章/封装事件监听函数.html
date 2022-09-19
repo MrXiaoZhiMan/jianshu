@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="div1">点击</div>
+    <!-- 
+      IE6-8：DOM对象.attachEvent(“on事件名”,事件处理函数);
+IE9+:DOM对象.addEventListener(“事件名”,事件处理函数,false冒泡/true捕获可
+     -->
+</body>
+<script>
+// function addEvent(elem,eventType,func){
+//     try{
+//     if(elem!=null && typeof elem == 'object'){
+//     //    elem 不是空 并且是对象材执行
+//     if(window.addEventListener){
+//         elem.addEventListener(eventType,func) 
+//     } else {
+//         elem.attachEvent('on'+eventType,func)
+//     }
+//     }else{
+//         // 否则抛出异常
+//         throw new Error('对象为空或者不是对象');
+//     }
+//     }catch(error){
+//      alert(error.message);
+//     }
+// } 
+
+// addEvent(window,'load',function(){
+//     var div1 = document.querySelector('#div1');
+//     addEvent(div1,'click',function(){
+//         alert('你成功了')
+//     })
+// })
+
+// function addEvent(elem,eventType,func){
+//     try{
+//       if(elem != null && typeof elem == 'object'){
+//         if(window.addEventListener){
+//             elem.addEventListener(eventType,func)
+//         }else {
+//              elem.attachEvent('on'+ eventType,func)
+//             }
+//       } else {
+//         throw new Error('对象为空或者不是对象');
+//       }
+//     }catch (error){
+//      alert(error.message)
+//     }
+// }
+
+// addEvent(window,'load',function(){
+//     var div1 = document.querySelector('#div1')
+//   addEvent(div1,'click',function(){
+//     alert('你成功了')
+//   })
+// })
+
+function addEvent(elem,eventType,func){
+    try {
+      if(elem != null && typeof elem == 'object'){
+      if(window.addEventListener){
+        elem.addEventListener(eventType,func)
+      }else{
+        // ie678要加on 所以在前面加一个on
+            elem.attachEvent('on'+ eventType,func)
+        }
+      }else{
+        throw new Error('elem为空 或者不是对象')
+      }
+    }catch (error){
+        alert(error.message)
+    }
+}
+   addEvent(window,'load',function(){
+    var div1 = document.querySelector('#div1')
+    addEvent(div1,'click',function(){
+        alert('你成功了')
+    })
+   })
+</script>
+</html>

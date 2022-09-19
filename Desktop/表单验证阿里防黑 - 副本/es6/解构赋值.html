@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="myuserNmae" />
+    <input type="password" id="mypwd" />
+    <button id="mybtn">login</button>
+  </body>
+  <script>
+    // var arr = ["asd","sdf","nnn"]
+    // let [x,y,z] = arr;
+    // console.log(x,y,z);
+    // var a =10
+    // var b =20
+    // // 数组调换位置
+    // var [a,b]=[b,a]
+    // console.log(a,b);
+
+    // var arr2 = [1,2,[3,4,[5]]];
+    // console.log(arr2[2][2][0]);
+    // var [q,w,[e,r,[t]]] = arr2;
+    // console.log(t);
+
+    // var obj = {
+    //     name:"kwis",
+    //     locations:"dalian"
+    // }
+    // let {name,locations} = obj;
+    // console.log(locations);
+    // console.log();
+    mybtn.onclick = function () {
+      let userName = myuserNmae.value;
+      let pwd = mypwd.value;
+      console.log(userName, pwd);
+      var obj = {
+        // 前面的是key值后面的是变量
+        // userName:userName,
+        // password:pwd
+        //  前面的key和后面的变量是一样的话 就可以简写
+        userName,
+        password
+    }
+    console.log(userName, pwd);
+    
+    }; 
+   
+  </script>
+</html>

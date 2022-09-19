@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var child1;
+var child2;
+function parent() {
+    var x = 1; //2
+
+    child1 = function () {
+        console.log(++x)
+    };
+    child2 = function () {
+        console.log(--x)
+    };
+}
+parent();
+child1(); //2
+child1(); //3
+child2(); //2
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

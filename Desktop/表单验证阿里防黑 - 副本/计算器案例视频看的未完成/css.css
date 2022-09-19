@@ -1,0 +1,114 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+       /*  flex-direction: row;
+默认值。灵活的项目将水平显示，正如一个行一样。 
+1 2 3 4 5 横向排列这种方式排列 在盒子的左上侧的位置*/
+    flex-direction: column;
+/* flex-direction: column;
+灵活的项目将垂直显示，正如一个列一样。
+在合资的左上方 竖着排列 1
+                      2
+                      3
+                      4
+                      5 */
+    
+    /* flex-direction: row-reverse;
+与 row 相同，但是以相反的顺序。 5 4 3 2 1 在盒子的右上方排列*/
+}
+/* 意思是：当屏幕的宽度大于600px，应用style.css文件。 */
+@media screen and (min-width:640px){
+    .wrap{
+        width: 640px;
+    }
+}
+
+.show-panel{
+    width:100%;
+    height: 30%;
+    background: #fff;
+    padding: 10px;
+    /* 加了 box-sizing: border-box;会固定总宽度的width 不会因为外边距等影响*/
+    box-sizing: border-box;
+}
+
+.show-panel-box{
+    width:100%;
+     font-size: 26px;
+     text-align: right;
+     /* margin-top: 5%; */
+     /* 超出此行宽度后自动换行 */
+     word-wrap: break-word;
+}
+.show-ds{
+    font-size: 25px;
+    text-align: right;
+    color: gray;
+    word-wrap: break-word;
+}
+.btn-panel{
+    height: 70%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+.top-btn{
+    display: flex;
+
+
+    justify-content: space-between;
+    flex-direction: row;
+    height: 15%;
+}
+.top-btn a{
+    /* 去除下划线 */
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items中的items指的是flex 中的子项，因此align-items指
+    的就是flex子项们相对于flex容器在垂直方向上的对齐方式。 2、适用于
+    所有的flex容器，单行时候垂直居中使用align-items: center。 */
+    align-items: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    width: 49.35%;
+    font-size: 30px;
+}
+.bom-btn{
+    display: flex;
+    flex-direction: row;
+    /* 超出盒子自动下一行 */
+    flex-flow: wrap;
+    width: 100%;
+    height: 85%;
+    /* 两个盒子两边对齐 */
+    justify-content: space-between;
+    /* 两边各自剧中对其 */
+    align-items: center;
+    margin-top: 1%;
+}
+.bom-btn a{
+    display: flex;
+    width: 24%;
+    height: 24%;
+    background: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    font-size: 40px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

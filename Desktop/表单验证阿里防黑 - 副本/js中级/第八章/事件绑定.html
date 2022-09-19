@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div2{
+            width: 200px;
+            height: 200px;
+            background-color: #bcbccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="div1" onclick="tips()">
+    ss</div> -->
+
+    <div class="div2">
+
+    </div>
+</body>
+<script>
+    // function tips(){
+    //     alert('asd')
+    // }
+
+    // wondow.onload  
+    if(window.addEventListener){
+        // window.addEventListener 判断是不是IE9+ Firefox，Chrome，Opera，Safari 标准浏览器
+        window.addEventListener("load",function(){ // 相当于window.onload=function(){}处理函数
+             var div1 = document.querySelector('.div2');
+             div1.addEventListener('click',function(){
+                alert('触发了div1上的click事件1111')
+             })
+        })
+  } else {
+    var div1 = document.querySelector('.div2');
+    div1.addEventListener('onclick',function(){
+    alert('兼容性 IE6/7/8 写法')
+    })
+  }
+</script>
+</html>

@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.allPage {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.bigRight {
+    float: left;
+    width: 692px;
+}
+
+.navBg {
+    overflow: hidden;
+    width: 880px;
+    height: 210px;
+    background: url(01/banner.jpg) no-repeat;
+}
+
+.navBg ul {
+    margin-left: 483px;
+    margin-top: 173px;
+}
+
+.navBg ul li {
+    float: left;
+    list-style: none;
+    margin: 0 14px;
+}
+
+.navBg ul li a {
+    color: #000;
+    font-size: 12px;
+}
+
+.temers {
+    float: left;
+}
+
+.tame {
+    overflow: hidden;
+    float: left;
+    width: 292px;
+    height: 140px;
+    background: #8cbddd url(01/time.jpg) no-repeat;
+}
+
+.tame ul {
+    width: 230px;
+    margin-left: 50px;
+}
+
+.tame p {
+    margin-left: 50px;
+}
+
+.tame ul li {
+    font-size: 12px;
+    float: left;
+    list-style: none;
+    width: 20px;
+    height: 21px;
+}
+
+.jemmifer {
+    margin-left: 20px;
+    float: left;
+    width: 380px;
+    height: 140px;
+    background: rgb(94, 209, 200) url(01/recommendblog.jpg) no-repeat;
+}
+
+.jemmifer ul li {
+    margin-top: 6px;
+    padding-left: 50px;
+    font-size: 12px;
+    list-style: none;
+    background: url(01/arrow4.gif) no-repeat 40px 6px;
+}
+
+.listRight {
+    float: right;
+    margin-right: 20px;
+}
+
+/* 样式统计 */
+.styleStatistics {
+    float: right;
+    width: 176px;
+    margin-left: 12px;
+    background-color: #0084a9;
+
+}
+
+.styleStatistics ul li {
+    list-style: none;
+    font-size: 12px;
+    padding: 3px 10px;
+    background: url(01/arrow1.gif) no-repeat 3px 9px;
+}
+
+.hot_Blog {
+    height: 30px;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.blogSearch {
+    height: 35px;
+    line-height: 35px;
+    margin: 5px auto;
+    float: left;
+    vertical-align: middle;
+    background: url("01/blogsearch.jpg") no-repeat;
+}
+
+.blogSearch .inp {
+    margin-left: 200px;
+}
+
+.stylePush {
+    width: 692px;
+    height: 176px;
+    background: url(01/recommendart.jpg) no-repeat;
+    background-color: #09f;
+}
+
+.ulOne {
+    margin-top: 30px;
+    float: left;
+}
+
+.ulTwo li,
+.ulOne li {
+    font-size: 12px;
+    margin: 3px auto;
+    height: 21px;
+    list-style: none;
+}
+
+.ulTwo {
+    margin-top: 30px;
+    float: right;
+}
+
+.newLog {
+    overflow: hidden;
+    margin-top: 40px;
+    background-color: #09f;
+}
+
+.newLog img {
+    float: left;
+}
+
+.newLog ul {
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+.newLog ul li {
+    list-style: none;
+    width: 310px;
+    float: left;
+    font-size: 12px;
+    margin: 3px auto;
+    height: 20px;
+    font-size: 12px;
+}
+.navBottom ul li {
+    float: left;
+    list-style: none;
+    height: 21px;
+    line-height: 18px;
+    padding: 0 5px;
+    border-right: 1px solid #09f;
+}
+.blog {
+    background: rgb(95, 184, 150);
+}
+.ggg {
+    height:12px;
+    width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: rgb(95, 184, 150);
+}
+.icc {
+    overflow: hidden;
+    
+}

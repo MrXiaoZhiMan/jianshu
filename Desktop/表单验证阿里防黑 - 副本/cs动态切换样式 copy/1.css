@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+}
+/* banner背景图 */
+.global_Classes {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.banner {
+    overflow: hidden;
+    width: 880px;
+    height: 210px;
+    background: url(01/banner.jpg) no-repeat;
+    /* banner 里面文字 */
+}.banner ul {
+    /* overflow: hidden; */
+    margin-top:176px ;
+    margin-left: 470px;
+}
+.banner ul li {
+    float: left;
+    list-style: none;
+    font-size: 12px;
+    margin: 0 14px;
+}
+.banner ul li a {
+    color: #fff;
+}
+.allPageLeft {
+    float: left;
+    width: 692px;
+}
+.timer {
+    float: left;
+    overflow: hidden;
+    width: 290px;
+    background:#09f url(01/time.jpg) no-repeat;
+}
+.timer .englishFace,
+.timer .mouther,
+.timer .datee {
+    overflow: hidden;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.timer .mouther{
+    margin-top: 10px;
+}
+.timer .englishFace li,
+.timer .mouther li,
+.timer .datee li{
+    float: left;
+    color: aquamarine;
+    margin: 0 8px;
+}
+.timer .englishFace li{
+    margin: 0;
+    width: 22px;
+    text-align: center;
+}
+
+/* times_right 盒子的样式 */
+.times_right {
+    float: left;
+    width:382px ;
+    background-color: #09f;
+    margin-left: 20px;
+    background: #09f url(01/recommendblog.jpg) no-repeat 14px 0;
+}
+.times_right .times_right_ul{
+    height:120px ;
+}
+.times_right .times_right_ul li{
+    margin: 3px 55px; 
+}
+.times_right .times_right_ul li:nth-child(1){
+    margin: 10px 55px;
+}
+/* blogsearch 博客搜索 */
+.inp,
+.inp2 {
+    float: left;
+    width: 692px;
+    height: 34px;
+    margin-top:14px ;
+    line-height: 34px;
+    background:#09f url(./01/blogsearch.jpg) no-repeat;
+}
+.inp input:nth-child(1) {
+   margin-left: 170px;
+}
+.inp2{
+    padding-left: 25px;
+    background: none;
+    background-color: #09f;
+    box-sizing: border-box;
+}
+.styleRecommend {
+    float: left;
+    border: 1px solid #000;
+    margin-top: 16px;
+    background:#def1ff url(01/recommendart.jpg) no-repeat;
+}
+.styleRecommend ul {
+    margin-top: 35px;
+}
+.styleRecommend ul li {
+    float: left;
+    width: 300px;
+    height: 20px;
+    line-height: 20px;
+    margin: 6px 16px;
+}
+/* 最新日志 */
+.newLog {
+    float: left;
+    margin-top: 20px;
+    background:#def1ff url(01/newnode.jpg) no-repeat;
+}
+.newLog ul li {
+    float: left;
+    width: 305px;
+    height: 20px;
+    padding-left: 40px;
+    line-height: 20px;
+}
+/* 整体右侧样式 */
+.allPageRight {
+    float: right;
+    width: 176px;
+    background-color: #09f ;
+}
+.styleStatistics {
+    overflow: hidden;
+    width: 176px;
+    background: url(./01/lstatistics.jpg) no-repeat;
+}
+.styleStatistics ul {
+    margin-top: 40px;
+}
+.styleStatistics ul li {
+    list-style: none;
+    margin: 3px 10px;
+}
+/* 热门博客 */
+.hotBlog {
+    overflow: hidden;
+    width: 176px;
+    background: url(01/lhotblog.jpg) no-repeat;
+    margin-top:16px ;
+}
+.hotBlog ul{
+    margin: 10px 6px;
+    margin-top: 36px;
+}
+.recentlyUpdated {
+    overflow: hidden;
+    width: 176px;
+    background:#09f url(./01/lstatistics.jpg) no-repeat;
+}
+.recentlyUpdated ul {
+    margin-top: 36px;
+    margin-left: 6px;
+}
+/* 最新 */
+.newApplication{
+    overflow: hidden;
+    width: 176px;
+    margin-top: 10px;
+    background: url(01/lapply.jpg) no-repeat;
+}
+.newApplication ul {
+    margin-top: 36px;
+    margin-left: 6px;
+}

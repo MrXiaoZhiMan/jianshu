@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="text" value="" id="num1">
+    <select name="yy" id="ysf" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+   
+    <input type="text" value="" id="num2">
+    <input type="button" value="计算" id="btn" >
+    <div id="res">请输入运算的数</div>
+</body>
+<script>
+    document.querySelector('#res').onclick = function(){
+        var num1 = document.querySelector('#num1').value
+        var num2 = document.querySelector('#num2').value
+        var num2 = document.querySelector('#num2').value
+        var ysf = document.querySelector('#ysf').value
+
+        num1 = parseFloat(num1)
+        num2 = parseFloat(num2)
+        switch(ysf){
+            case '+': result = '运算结果：'+'num1+'+'num2' + ' =' + (num1+num2)
+            case '-': result = '运算结果：'+'num1-'+'num2' + ' =' + (num1+num2)
+            case '*': result = '运算结果：'+'num1*'+'num2' + ' =' + (num1+num2)
+            case '/': 
+            result = '运算结果：'+'num1/'+'num2' + ' =' + (num1+num2)
+            case '%': result = '运算结果：'+'num1%'+'num2' + ' =' + (num1+num2)
+        }
+        var res = document.querySelector('#res').innerHTML=result;
+
+    }
+</script>
+</html>

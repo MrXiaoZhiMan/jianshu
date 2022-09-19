@@ -1,0 +1,90 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(211, 236, 240);
+      color: #2a3a19;
+    }
+
+    .All {
+      margin: 0 auto;
+    }
+
+    img {
+      float: left;
+   
+    }
+
+    .functionAll {
+      float: left;
+    }
+
+    .functionAll>span {
+      display: block;
+    }
+
+    #promptInformation {
+      height: 70px;
+      line-height: 70px;
+      width: 950px;
+      text-align: center;
+      font-size: 28px;
+      border-radius: 10px;
+      /* background-color: rgb(162, 226, 218); */
+    }
+
+    .Verification {
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+    
+    }
+
+    .Verification input {
+      height: 35px;
+      width: 70px;
+      margin: 0 20px;
+      border: 0;
+      font-size: 25px;
+      outline: none;
+      transform: skew(351deg, 9deg);
+    }
+
+    .compareVerification {
+      text-align: center;
+    }
+
+    #changeVerification {
+      font-size: 25px;
+
+    }
+
+    .compareVerification span,#inp2 {
+
+      display: block;
+      height: 70px;
+      font-size: 25px;
+      line-height: 70px;
+    }
+    #inp2 {
+        margin: 0 auto;
+       height: 30px;
+       width: 160px;
+    }
+    #span3 {
+        overflow: hidden;
+    }
+    .compareVerificationInp {
+      border: 0;
+      background-color: rgb(137, 183, 226);
+      font-size: 25px;
+      border-radius: 10px;
+      width: 100px;
+    }
+
+    .compareVerification .trueVerification {
+      margin: 0 20px;
+      height: 25px;
+      border:1px solid #bcbcbc ;
+      outline: none;
+    }

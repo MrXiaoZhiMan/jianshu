@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // function test(x) {
+        //     var i=0;
+        //     return function(){
+        //       return x[i++]
+        //     }
+        // }
+        
+        // var str =test(['a','b','c']) 
+        // alert(str());
+        // alert(str());
+        // alert(str());
+
+
+
+        function test(x){
+            var i =0;
+            return function(){
+                return x[i++]
+            }
+        }
+        var str = test(['a','b','c'])
+        alert(str());
+        alert(str());
+        alert(str());
+
+        function test(x){
+            var i =0;
+            return function(){
+                return x[i++]
+            }
+        }
+        var str = test(['a','b','c'])
+        alert(str());
+        alert(str());
+        alert(str());
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // 闭包-4 使用自调函数来实现
+        function test(){
+           var x=[];
+            var i;
+            for(i=0;i<3;i++){
+               x[i]=(function(a){
+                return function(){
+                    return a;
+                }
+               })(i);
+            }
+      return x;
+        }
+        // 调用
+        var a=test();
+        alert(a(0)());
+        alert(a(1)());
+        alert(a(2)());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

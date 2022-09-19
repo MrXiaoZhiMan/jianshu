@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .add{
+            width: 100px;
+            height: 100px;
+           background-color: #ff1122;
+        }
+    </style>
+</head>
+<body>
+    <div class="add">
+    
+    </div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    div.addEventListener('click',function(){
+        alert('asd')
+    })
+    addEvent(window,'load',function(){
+        // window.onload
+        var div1 = document.getElementById('add');
+        addEvent(div1,'click',function(){
+            
+        })
+    })
+</script>
+</html>

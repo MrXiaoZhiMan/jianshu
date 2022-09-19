@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">
+            测试哈哈哈
+        </p>
+        <p>明天的你会感谢今天努力的自己！</p>
+    </div>
+</body>
+<script>
+    //切换到第一个儿子元素节点
+    // 说明:firstElementChild IE9+以上支持，IE6/7/8不支持
+    //firstChild 所有浏览器都支持
+    var div1=document.getElementById("div1");
+    if(window.addEventListener){
+        //IE9+
+        console.log(div1.firstElementChild);
+    }else{
+        //IE6/7/8
+        console.log(div1.firstChild);
+    }
+</script>
+</html>

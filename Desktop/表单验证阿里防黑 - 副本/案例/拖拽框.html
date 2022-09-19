@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+   *{
+    margin: 0;
+    padding: 0;
+   }
+      body {
+        background-color: #bcbcbc;
+      }
+      .login {
+        width: 300px;
+        height: 200px;
+        background-color: #fff;
+        position: absolute;
+      }
+      .log_in {
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        background-color: #fff;
+      }
+      .log_in:hover{
+        cursor: pointer;
+      }
+      .close {
+        color: #09f;
+        background-color: rgb(226, 170, 170);
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 260px;
+        margin-top: -20px;
+        position: fixed;
+        box-sizing: border-box;
+      }
+      input {
+        width: 200px;
+        /* margin: 15px auto; */
+        /* display: block; */
+      }
+      /* .inp {
+         margin-top: 20px; 
+     margin: 0 15px; 
+        box-sizing: border-box;
+      }  */
+    </style>
+  </head>
+  <body>
+    
+    <div class="login">
+      <a href="javascript:;" class="close">关闭</a>
+      <div class="log_in">
+        登陆会员
+       
+      </div>
+      <div class="inp">
+        用户名: <input type="text" /> 密 码: <input type="password" />
+      </div>
+    </div>
+  </body>
+  <script>
+    var log_in = document.querySelector('.log_in')
+    var close = document.querySelector('.close')
+    var login = document.querySelector('.login')
+    var x ;
+          var y ;
+          log_in.addEventListener('mousedown',function(e){
+        console.log(e.pageX);
+       x= e.pageX - log_in.offsetLeft;
+       y= e.pageY - log_in.offsetTop;
+           login.style.left = x;
+           login.style.top = y;
+        // 获得的是鼠标在盒子内的距离
+          
+         
+          document.addEventListener('mousemove',move)
+         function move(e){
+            login.style.left = e.pageX - x+'px';
+            login.style.top = e.pageY - y+'px';
+         }
+         document.addEventListener('mouseup',function(){
+          document.removeEventListener('mousemove',move)
+       })
+
+    })
+  
+  </script>
+</html>

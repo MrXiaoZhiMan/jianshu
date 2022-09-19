@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+    window.onload = function () {
+        var add = document.getElementById('add');
+        function timer() {
+            var timee = new Date();
+            var year = timee.getFullYear();
+            var hour = timee.getHours();
+            var minute = timee.getMinutes();
+            var second = timee.getSeconds();           
+        add.innerText = year+'年'+timee+'日';
+           setInterval(timer,1000)
+        //    function setInterval(timer,1000){
+            // timer()
+        // }
+        }
+        timer();
+    }
+    // 递归函数：函数内部都有自己调用自己的语句--（递归调用）
+    // 开发场景：永动  （2）
+        
+    </script>
+</head>
+<body>
+    <div id='add'></div>
+ 
+</body>
+
+
+</html>

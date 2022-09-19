@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        作用：__proto__在 IE6中私有属性，对象.__proto__无法访问
+        __proto__在IEChrome Firefox 是可以在外部使用
+        私有属性：不能在构造器函数外使用
+        实际开发中，__proto__为了兼容 IE8-10,所以不能够使用__proto__
+
+
+        开发场景：如果原型上的属性或方法，与自身属性活方法重名怎么办？
+        自身属性或方法优先级高 如何使用原型上的方法或属性
+
+        问题：__proto__IE 6-10 是私有属性 不能直接访问
+        
+        解决方案 对象.constructor  因为自身属性上没有constructor 
+        原型上的 constructor 指向的是构造器函数本身si.constructor 得到构造器函数本身 
+        .prototype.属性或方法 就获得了原型上的属性或方法 
+        使用si.constructor.prototype.study() 
+     -->
+</body>
+</html>

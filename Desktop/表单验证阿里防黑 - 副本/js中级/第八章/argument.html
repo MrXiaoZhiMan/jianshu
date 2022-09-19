@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        arguments 可以得到实参的个数 不会因为形参的个数收到影响
+        argumengs的属性有两个
+         length  实参的个数
+         callee 属性  该属性返回当前被调用函数本身（指向函数本身）
+     -->
+</body>
+<script>
+    function test(x,y){
+        console.log(arguments);
+        console.log('实参',arguments[0],arguments[1],arguments[2],arguments[3]);
+        console.log(arguments.length); // 实参的个数
+        console.log(arguments.callee === test); // 是真确的 两者是全等关系
+        console.log(test.length); // 形参的个数
+        if(arguments.length != test.length){
+            alert('形参实参的个数不同')
+        }
+    }
+</script>
+</html>

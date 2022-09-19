@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      span.red {
+        color: red;
+      }
+    </style>
+  </head>
+  <script>
+    //获取元素
+    window.onload = function () {
+      var t1 = document.querySelector("#t1");
+      var tips = document.querySelector("#tips");
+      var bt1 = document.querySelector("#bt1");
+      t1.onkeyup = t1.keypress = function () {
+        if (this.value.length <= 140) {
+          tips.innerText = `还可以输入${140 - this.value.length}字`;
+        } else {
+          bt1.onclick = function () {
+            var i = 1;
+            var sid = setInterval(function () {
+              switch (i++) {
+                case 1:
+                  t1.style.backgroundColor = "yellow";
+                  break;
+                case 2:
+                  t1.style.backgroundColor = "orange";
+                  break;
+                case 3:
+                  t1.style.backgroundColor = "yellow";
+                  break;
+                case 4:
+                  t1.style.backgroundColor = "red";
+                  break;
+              }
+            }, 500);
+            if (i == 4) {
+              clearInterval(sid);
+            }
+          };
+          tips.innerHTML =
+            '已超出<span class="red">' +
+            (this.value.length - 140) +
+            "</span>字";
+        }
+      };
+    };
+  </script>
+  <body>
+    <textarea id="t1" cols="50" rows="10"></textarea
+    ><span id="tips">还可以输入140字</span>
+    <input type="button" id="bt1" value="发布" />
+  </body>
+</html>

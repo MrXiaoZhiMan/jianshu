@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     function myFunc(theObject) {
+    //     theObject[0] = "y";
+       
+    //     }
+    //   var arr = 'asdfghjkl'
+    //   myFunc(arr);
+    //    console.log(arr);
+    //    如果你传递一个对象（即一个非原始值，例如Array或用户自定义的对象）
+    //    作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示
+    function myFunc(theObject) {
+  theObject.make = "Toyota";
+}
+
+var mycar = {make: "Honda", model: "Accord", year: 1998};
+var x, y;
+
+x = mycar.make;     // x 获取的值为 "Honda"
+
+myFunc(mycar);
+y = mycar.make;     // y 获取的值为 "Toyota"
+                    // (make 属性被函数改变了)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

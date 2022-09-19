@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // 回调函数：被当作函数实参传递的函数称为回调函数
+        function a(alert){
+            return alert;
+        }
+        a(333);
+        function b(){
+            return 1;
+        }
+        function add(x,y){
+            // console.log(x);
+            // x()是调用a函数 y时调用b函数
+            return x()+y();
+        }
+        add()
+        // 这里面的a是函数名为a的函数地址，b是函数名为b的地址
+        // 函数a函数b被当作参数传递 那么这两个函数就是回调函数
+        alert(add(a,b))
+        // 匿名回调函数
+        alert(add(
+            //#2222,
+               
+            
+          //#1111
+               
+         
+        ))
+        setInterval(a,1000)
+    </script>
+</head>
+<body>
+    <!-- 被当作参数传递的函数，这个函数就称为回调函数
+    函数名（回调函数1，回调函数2） -->
+
+    <!--
+
+        基本数据类型-标量类型 ： 一个变量存储一个值
+        （1）number型 ：包括整数和小数
+        （2） string 型 凡是用”“或 ’‘ 包裹的都是自负串
+        （3）boolean型 只有true和false
+        （4）undefined型 只有undefined
+
+        对象/引用类型：对象名存储的是内存块的首地址
+        特点：存储的 拷贝的 比较的 当作参数传递的，返回的都是内存块的首地址
+        （1） object
+        （2）function
+      -->
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无缝滚动</title>
+<style>
+#div1{
+	border:3px solid #f00;
+	width:942px;
+	height:100px;
+	overflow:hidden;
+	position:relative;
+}
+#div1 img{
+	position:absolute;
+}
+</style>
+
+</head>
+
+<body>
+<div id="div1">
+    <img src="images/jjx1.jpg"><img src="images/jjx2.jpg"><img src="images/jjx3.jpg"><img src="images/jjx4.jpg"><img src="images/jjx5.jpg"><img src="images/jjx6.jpg"><img src="images/jjx1.jpg"><img src="images/jjx2.jpg"><img src="images/jjx3.jpg"><img src="images/jjx4.jpg"><img src="images/jjx5.jpg"><img src="images/jjx6.jpg">
+</div>
+</body>
+<script>
+  var div = document.querySelector('#div1');
+  var imgs = document.querySelectorAll('img');
+  var sid;
+ function moveImg(){
+ for(var j=1;j<imgs.length;j++){
+  // 利用for循环初始化所有的图片位置
+  imgs[j].style.left=imgs[j-1].offsetLeft+imgs[j].offsetLeft+157+'px';
+ }
+   sid= setInterval(function(){
+  for(var i =0;i<imgs.length;i++){
+    // 移动每一张图片的位置 实现滚动的效果
+    imgs[i].style.left=imgs[i].offsetLeft-1+'px';
+  }
+  // 判断第一张图片是否大于等于-942要是的话说明六张图都已经移出了div这个框
+  if(imgs[0].offsetLeft<=-942){
+    // 当六张图都移出了这个div框的话 那么就把第一张的图片移到最右侧从新进行移动
+    imgs[0].style.left='942px';
+    for(var j =1;j<6;j++){
+      // 利用for循环把剩余的几张图片位置以第一张图的位置为基础移动过去实现六张图片连续滚动
+   imgs[j].style.left=imgs[j-1].offsetLeft+157+'px';
+    }
+  }
+  if(imgs[6].offsetLeft<=-942){
+    imgs[6].style.left='942px';
+    for(var j=7;j<12;j++){
+      imgs[j].style.left=imgs[j-1].offsetLeft+157+'px';
+    }
+  }
+ },10)
+ }
+ moveImg()
+</script>
+</html>

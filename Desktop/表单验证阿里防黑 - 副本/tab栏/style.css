@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    height: 22px;
+    line-height: 23px;
+    list-style: none;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 0;
+    border-bottom: 1px solid #09f;
+}
+
+ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 0 10px;
+    color: #000;
+    border: 1px solid #09f;
+    border-bottom: 0;
+}
+
+.contenter {
+    height: 79px;
+    margin-left: 30px;
+    border: 1px solid #09f;
+    border-top: 0;
+}
+
+ul li a:hover {
+    background-color: rgb(182, 181, 238);
+    text-decoration: underline;
+    color: rgb(233, 209, 143);
+}
+
+body#blog li.blog a:link,
+body#blog li.blog a:visited,
+body#music li.music a:link,
+body#music li.music a:visited,
+body#nextStation li.nextStation a:link,
+body#nextStation li.nextStation a:visited,
+body#storts li.storts a:link,
+body#storts li.storts a:visited,
+body#news li.news a:link,
+body#news li.news a:visited,
+body#home li.home a:link,
+body#home li.home a:visited {
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    color: rgb(233, 209, 143);
+}

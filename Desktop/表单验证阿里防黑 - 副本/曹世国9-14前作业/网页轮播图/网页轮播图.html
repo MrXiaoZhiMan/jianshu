@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+   
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+        .div1{
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+      .ul {
+        width: 600%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .ul li {
+        float: left;
+        list-style: none;
+        /* display: none; */
+      }
+      .arrow-l,
+      .arrow-r{
+        display: none;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        width: 24px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.3);
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-family: 'icomoon';
+        font-size: 18px;
+        z-index: 1;
+      }
+      .arrow-r{
+        right: 0%;
+      }
+      .arrow-l{
+  left: 7%;
+      }
+      .quan {
+        position: absolute;
+        margin-left:45%;
+        margin-top: 350px;
+      }
+      .quan li{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: red;
+        z-index: 2;
+        margin-left: 10px;
+        list-style: none;
+        box-sizing: border-box;
+        float: left;
+      }
+     .quan .current{
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <ul class="ul">
+        <li>
+          <a href="javascript:;"><img src="images/1.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="javascript:;"><img src="images/2.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="javascript:;"><img src="images/3.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="javascript:;"><img src="images/4.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="javascript:;"><img src="images/5.jpg" alt="" /></a>
+        </li>
+      </ul>
+      <div class="arrow-l"></div>
+      <div class="arrow-r"></div>
+      <ol class="quan">
+        
+      </ol>
+    </div>
+  </body>
+  <script src="animate.js"></script>
+  <script src="index.js"></script>
+</html>

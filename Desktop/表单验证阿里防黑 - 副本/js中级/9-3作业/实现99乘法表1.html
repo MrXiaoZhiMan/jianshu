@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table.datalist{
+            border: 5px solid #090;
+            border-collapse: collapse;
+            width: 800px;
+            height: 400px;
+            text-align: center;
+        }
+        td{
+            border: 5px solid #090;
+            border-collapse: collapse;
+            background: #09f;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var tab=document.createElement("table");
+            var tah=document.createElement("thead");
+            var tay=document.createElement("tbody");
+            var taf=document.createElement("tfoot");
+            tab.appendChild(tah);
+            tab.appendChild(tay);
+            tab.appendChild(taf);
+            var tce=tay.insertRow();
+            tce.insertCell().appendChild(document.createTextNode("*"));
+            for(var i=1;i<=9;i++){
+                var td=tce.insertCell();
+                td.appendChild(document.createTextNode(i));
+            }
+            for(var i=1;i<=9;i++){
+                var tcel=tay.insertRow();
+                tcel.insertCell().appendChild(document.createTextNode(i));
+                for(var j=1;j<=i;j++){
+                tcel.insertCell().appendChild(document.createTextNode(i+"*"+j+"="+i*j));
+            }
+        }
+        document.body.appendChild(tab);
+        tab.className="datalist";
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

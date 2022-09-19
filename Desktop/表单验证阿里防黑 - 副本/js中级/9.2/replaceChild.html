@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" id="bt1" value="创建p替换a">
+  <div id="div1">
+    <p>哈哈哈</p>
+    <a href="dsf.html" id="a1">百度</a>
+  </div>
+  <div id="div2"></div>
+</body>
+<script>
+    var bt1=document.getElementById("bt1");
+    var a1=document.getElementById("a1");
+    var div1=document.getElementById("div1");
+    bt1.onclick=function (){
+        var p=document.createElement("p");
+        p.innerText="新p标记";
+        div1.replaceChild(p,a1);
+    }
+</script>
+</html>

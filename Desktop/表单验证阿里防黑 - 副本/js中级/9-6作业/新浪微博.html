@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div{
+            font-size: 19px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="text" id="text" cols="30" rows="10" ></textarea>
+    <div id="div1">
+
+    </div>
+</body>
+<script>
+    var  textee = document.querySelector('textarea');
+    var  div1 = document.querySelector('div');
+    textee.addEventListener('input',function(){
+        console.log(textee.value.length);
+       if(textee.value.length >50){
+        div1.innerText = "超出了" + (textee.value.length - 50);
+       } else {
+        div1.innerText ='';
+       }
+    })
+</script>
+</html>

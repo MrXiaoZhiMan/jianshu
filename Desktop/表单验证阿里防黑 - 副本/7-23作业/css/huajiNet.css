@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  width: 1400px;
+  margin: 0 auto;
+  background-color: aquamarine
+}
+
+.nav ul {
+  height: 28px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.nav ul li {
+  float: left;
+  list-style: none;
+  height: 28px;
+  line-height: 28px;
+  margin: 0 10px;
+  font-size: 12px;
+  color: #8c9496;
+}
+
+.nav ul li:nth-child(1) {
+  color: #000;
+}
+
+.nav ul .huajiPage {
+  margin-left: 300px;
+}
+
+.fl ul {
+  overflow: hidden;
+}
+
+.huajiPhoto img {
+  margin: 20px 270px;
+}
+
+.bigBody {
+  width: 900px;
+  margin: 0 auto;
+  background-color: #f0f5f7;
+  border: 2px solid #09f;
+  border-left:1px solid #bcbcbc ;
+  border-right:1px solid #bcbcbc ;
+  border-bottom:0 ;
+}
+.bodyFant {
+  margin-left: 20px ;
+  padding-top: 25px;
+}
+.bigBody p {
+  font-size: 12px;
+}
+
+.bigBody h2 {
+  font-weight: 400;
+}
+
+.bigBody .hTwo {
+  margin-top: 50px;
+}
+#texter {
+  resize: none;
+}
+.fantQuantity {
+  font-size: 12px;
+  margin-left: 680px;
+}
+.uploadPhoto {
+  width: 122px;
+  height: 31px;
+  line-height: 31px;
+  color: #09f;
+  background: url(img/give_advice.png) no-repeat 0 0 ;
+}
+.uploadPhoto {
+  width: 900px;
+}
+.uploadPhoto span{
+ margin-left: 45px;
+}
+.uploadPhoto .spanTwo{
+  font-size: 12px;
+  margin-left: 20px;
+}
+.contact {
+  width: 900px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.contact h2   {
+  float: left;
+  margin-right: 15px;
+   font-weight: 300;
+}
+.contact div {
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+}
+.emo,
+.nub,
+.qq {
+  margin: 15px auto;
+}
+.emoPhoto,
+.nubPhoto,
+.qqPhoto {
+  float: left;
+  width: 23px;
+  height: 24px;
+  margin: 10px 15px;
+  margin-top: 20px;
+  background: url(img/give_advice.png)no-repeat 0 -71px;
+}
+.emo div div input,
+.nub div div input,
+.qq div div input {
+  width: 500px;
+  height: 25px;
+  margin: 5px auto;
+}
+.qqPhoto {
+  margin-right: 20px;
+}
+.nubPhoto {
+  margin-right: 26px;
+  width: 17px;
+  height: 30px;
+  background: url(img/give_advice.png) no-repeat -48px -69px;
+}
+.emoPhoto {
+  width: 29px;
+  height: 19px;
+  background: url(img/give_advice.png) no-repeat -91px -74px;
+}
+.submit input {
+  margin-left: 15px;
+  width: 120px;
+  height: 30px;
+  line-height: 34px;
+  border: 0;
+  outline: none;
+  background-color: #b3dae4;
+}
+.borderr {
+  width: 900px;
+  height: 30px;
+  margin-left: -20px;
+  margin-top: 60px;
+  border-top: 1px solid #bcbcbc;
+  border-bottom: 2px solid #09f;
+  border-right: 0;
+}
+.tail {
+  width: 1080px;
+  margin: 15px auto;
+}
+.tail ul {
+  width: 900px;
+  margin:0 auto;
+}
+.tail ul li {
+  float: left;
+  list-style-type: none;
+  padding: 0 10px;
+  font-size: 12px;
+  border-right: 1px solid #bcbcbc;
+}
+.tail .listLast {
+  border-right: 0;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #bcbcbc;
+            display: none;
+        }
+         .btnclass{
+            background-color: red;
+         }
+        .btn {
+            width: 50px;
+            height: 36px;
+            background-color: #bcbcbc;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button >按钮</button>
+    <div style="display: block;">想要捕捉一点光线,透过平静水面,然后深陷,
+    情绪盘根错节,找到一点关联,然后不见</div>
+    <div>人间烟火味 最扶凡人心</div>
+    <div>333333333</div>
+</body>
+<script>
+    // var btns = document.querySelectorAll('button');
+    // var divs = document.querySelectorAll('div');
+    // for (var i = 0; i < btns.length; i++) {
+    //     btns[i].onclick = function () {
+    //         for (var j = 0; j < btns.length; j++) {
+    //             btns[j].setAttribute('index',j);
+    //             btns[j].className = "";
+    //             divs[j].style.display = 'none';
+    //         }
+    //         this.className = 'btnclass';
+    //         divs[this.getAttribute('index')].style.display='block'
+    //     }
+    // }
+    
+
+
+    // var btns = document.querySelectorAll('button');
+    // var divs = document.querySelectorAll('div');
+    // for(var i =0 ;i<btns.length;i++){
+    //     btns[i].onclick = function (){
+    //         for(var i =0 ; i <btns.length;i++){
+    //             btns[i].setAttribute('index',i);
+    //             btns[i].className='';
+    //             divs[i].style.display = 'none';
+    //         }
+    //         this.className = 'btnclass';
+    //         divs[this.getAttribute('index')].style.display = 'block'
+    //     }
+    // }
+
+    var btns = document.querySelectorAll('button');
+    var divs = document.querySelectorAll('div');
+    for(var i=0;i<btns.length;i++){
+        btns[i].onclick = function (){
+            for(var i =0;i<btns.length;i++){
+                btns[i].setAttribute('index',i);
+                btns[i].className = '';
+                divs[i].style.display = 'none'
+            }
+            this.className='btnclass';
+            divs[this.getAttribute('index')].style.display='block'
+        }
+    }
+    
+</script>
+
+</html>

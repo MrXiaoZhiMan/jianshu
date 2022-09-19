@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+     .oo{
+        width: 100px;
+        background-color: aqua;
+     }
+     .aa{
+        width: 200px;
+        background-color: rgb(97, 235, 93);
+     } .bb{
+        width: 300px;
+        background-color: rgb(101, 36, 185);
+     }
+    </style>
+</head>
+<body>
+    <!-- 
+        style属性（行内样式，css样式带-去掉，必须符合国际命名
+        获取或设置行内样式
+        style.cssText属性（行内样式，可以一次添加多个样式）
+        className属性（应用类型选择器class=类名）
+        <标记 style='属性：值；属性：值'，......><标记>
+        div1.style.backgroundColor='#09f'
+        问题 ： 一次只能设置一个值 而且是js的写法
+        div1.style.cssText="background-color:'09f';border:1px solid #000;left:350px"
+
+    -->
+    <div id="div1" class="oo">
+  测试哈哈哈
+    </div>
+</body>
+<script>
+  var div1 = document.querySelectorAll('#div1');
+//   var oo = document.querySelector('.oo');
+  function addclass(className){
+ return  div1.className += ' ' +className
+  }
+  var str =addclass('asd');
+  var str =addclass('fgh');
+  var str =addclass('aa');
+  var str =addclass('bb');
+var arr =str.split(' ')
+console.log(arr);
+function removeclassname(removenode){
+   for(var i = 0; i<arr.length;i++){
+    if(arr[i] == removenode){
+       arr[i]='';
+      //  div1.removeClass(removenode);
+    }
+   }
+   return arr;
+}
+var arr =removeclassname('oo')
+var arr =removeclassname('asd')
+
+console.log(arr.join(' '));
+</script>
+</html>

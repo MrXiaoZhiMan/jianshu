@@ -1,0 +1,27 @@
+/*css样式初始化*/
+body,h1,h2,h3,h4,h5,h6,ul{margin:0px;padding:0px;}
+/*设置全局css文字样式*/
+body{font:12px/1.5em 微软雅黑; color: #666;}
+/*设置大容器*/
+div.container{width: 400px;margin:0px auto;margin-top: 100px;}
+/*设置提示信息*/
+#tips{text-align: right;height: 20px;visibility:hidden;}
+/*设置提示信息文字*/
+#tips span{font-size: 20px; font-weight: bold; font-style: italic;}
+/*超过140字，变色*/
+#tips .color-change{
+  color: #F19725;
+}
+/*超过2000字，变色*/
+#tips .color-warn{
+	color: #c00;
+}
+/*文本域样式*/
+#txt1{width: 400px;height: 100px; background-color: #fff;}
+#input1{
+	float: right;
+	    background: #ff8140;
+    border: 1px solid #f77c3d;
+    color: #fff;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        // 简单json
+        // '{"id","10001","name":"tom","age":19,"sex":"男"}'
+        // 正常json
+        //  '{"status":"10001","message":"统一提示信息",
+        //  "data":[{"id":"1001","name":"tom","age":19,"sex":"男"},
+        //  {"id":"1001","name":"tom","age":19,"sex":"男"}
+        //  ,{"id":"1001","name":"tom","age":19,"sex":"男"}]}
+    // window.onload = function (){
+    //     new switchButton(div1);
+    //     console.log(new switchButton('div1'));
+    // }
+    // function switchButton(id){
+    //     var _this = this;
+    //     var oDiv =document.getElementById(id)
+    //     this.aBtn = oDiv.getElementsByTagName("input");
+    //     this.aDiv=oDiv.getElementsByTagName("div");
+    //     for(var i =0;i<this.aBtn.length;i++0){
+    //         this.aBtn[i].index=i;
+    //         this.aBtn[i].onclick=function(){
+    //             _this.fnClick(this);
+    //         }
+    //     }
+    // }
+    // switchButton.prototype.fnClick=function(oBtn){
+    //     for(var i =0;i<this.aBtn.length;i++){
+    //         this.aBtn[i].className="";
+    //         this.aDiv[i].style.display="none";
+    //     }
+    //     oBtn.className="active";
+    //     this.aDiv[oBtn.index].style.display="block"
+    // }
+ 
+
+    // 将josn字符串转换为js对象
+    // 方案1 ： eval转
+    //       优势：兼容性好
+    //       缺点：如果控制不好，会有安全隐患
+
+    // var js 对象=eval("("+json字符串+")")
+
+    // 方案二parse(); 
+    // 优势：安全可靠；IE8及以上浏览器支持
+    // var obj2=JSON.parse(json);
+
+    // 将对象转换为json
+    // var json1 = JSON.stringify(obj2)
+  </script>
+</head>
+<body>
+    <!-- 
+        1,两端是{}或[]
+        2，属性必须加“”
+        3，属性：值之间用，分割
+        4，属性的值不能是函数
+        5，属性的值是字符串需要加“”
+     -->
+</body>
+</html>

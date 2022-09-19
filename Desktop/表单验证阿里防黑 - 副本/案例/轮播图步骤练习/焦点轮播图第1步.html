@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        /*初始化*/
+        padding: 0;
+        margin: 0;
+        /*把所有元素内外边距和列表样式去掉*/
+        text-decoration: none;
+        list-style: none;
+
+    }
+    #banner{
+        width: 800px;
+        height: 400px;
+        border: 1px solid #999;
+        /*超出框外的图片隐藏，或者说溢出边框的图片隐藏*/
+        overflow: hidden;
+    }
+    /*列表4个图的宽*/
+    #imglist{
+        /*4个图的总宽度*/
+        width: 3200px;
+        /*每个图都是高400px*/
+        height: 400px;
+    }
+    #imglist img{
+        width: 800px;
+        height: 400px;
+    }
+    #imglist li{
+        /*列表元素li左浮动,图片横排*/
+        float: left;
+    }
+</style>
+<body>
+    <div id="banner">
+        <ul id="imglist">
+            <li><img src="./img/1.jpg" alt=""></li>
+            <li><img src="./img/2.jpeg" alt=""></li>
+            <li><img src="./img/3.jpg" alt=""></li>
+            <li><img src="./img/4.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

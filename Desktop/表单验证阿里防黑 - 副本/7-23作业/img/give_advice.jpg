@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>提建议</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/give_advice.css"/>
+    <script type="text/javascript" src="js/kissy/build/kissy-min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+<!-- 通用头部栏 -->
+<div id="site-nav">
+    <div id="site-nav-bd">
+        <p class="login-info">
+            Hi，欢迎来花集！
+            <a href="#">请登录</a>
+            <a href="#">免费注册 </a>
+        </p>
+        <ul class="quick-menu">
+            <li class="home"><a href="#" target="_blank">花集网首页</a></li>
+            <li class="order">
+                <a href="#" target="_blank">下订单</a>
+            </li>
+            <li class="myflowers menu-item">
+                <div class="menu">
+                    <a target="_blank" href="#" class="menu-hd">我的花集<b></b></a>
+
+                    <div class="menu-bd">
+                        <div id="myTaobaoPanel" class="menu-bd-panel">
+                            <div>
+                                <a href="#" target="_blank">已买到的宝贝</a>
+                            </div>
+                            <div>
+                                <a href="#" target="_blank">我的好友</a>
+                            </div>
+                            <div>
+                                <a href="#" target="_blank">最新动态</a>
+                            </div>
+                            <div>
+                                <a href="#" target="_blank">买家应用中心</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="favorite menu-item">
+                <div class="menu">
+                    <a rel="nofollow" href="#" target="_blank" class="menu-hd">收藏夹<b></b></a>
+
+                    <div class="menu-bd">
+                        <div class="menu-bd-panel">
+                            <div>
+                                <a href="#" target="_blank">收藏的宝贝</a>
+                                <a href="#" target="_blank">收藏的店铺</a>
+                                <a href="#" target="_blank">热门收藏</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="service">
+                <a href="#" target="_blank">帮助中心</a>
+            </li>
+            <li class="services menu-item last">
+                <div class="menu" id="J_Service">
+                    <a href="#" class="menu-hd" target="_blank">网站导航<b></b></a>
+
+                    <div class="menu-bd">
+                        <div class="menu-bd-panel">
+                            <div>
+                                <p><a href="#" target="_blank">网站一</a></p>
+
+                                <p><a href="#" target="_blank">网站二</a></p>
+
+                                <p><a href="#" target="_blank">网站三</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 头部logo及搜索 -->
+<div class="layout layout_index_hd">
+    <div class="logo fl">
+        <a href="#">
+            <img src="images/logo.jpg" alt="">
+        </a>
+    </div>
+</div>
+<!--提建议-->
+<div class="layout give-advice">
+    <div class="advice-con">
+        <!--一-->
+        <div class="advice-list">
+            <div class="question-item">
+               <strong>一、花集网<a href="#">首页</a>反馈</strong>
+            </div>
+            <p class="advice-explain">
+               亲爱的：<br>
+               您对花集网“商品列表页”有任何建议，或使用中遇到问题，请在本页面反馈。<br>
+               投诉、举报或纠纷处理，请联系花集客服中心：http://hlep.huaji.com/support/contact.htm
+            </p>
+        </div>
+        <!--二-->
+        <form id="reg_form">
+        <div class="advice-list">
+            <div class="question-item">
+               <strong>二、请留下您对<a href="#">商品列表页</a>的意见和建议！（请填写）</strong>
+            </div>
+            <p class="advice-explain">
+               恳请您详细描述您对页面布局、广告信息、类目导航、搜索方式、楼层展示等任何与商城首页相关的意见和建议，以帮助我们提高。<br>
+               恳请您具体描述所遇到的情况，如：搜索的内容、搜索结果页面地址、与您的期望有哪些不符等</p>
+            <div class="question-content clearfix">
+                <div><textarea name="#" class="text-input" ></textarea></div>
+                <p class="count fr">还可以输入<span>1000</span>字</p>
+            </div>
+            <div class="upload">
+                <a href="#" class="uploadBtn">上传图片</a>
+                <span>支持JPG,GIF,BMP,图片大小不能超过500K</span>
+            </div>
+        </div>
+        <!--三-->
+        <div class="advice-list">
+            <div class="question-item space bg">
+               <strong>三、联系方式填写</strong>
+               <span>期待您留下联系方式，如有问题我们将第一时间与您沟通，可选填一项，谢谢。</span>
+            </div>
+            <dl class="contact-way bg clearfix">
+               <dt class="fl"><span class="icon q_icon"></span></dt>
+               <dd class="fl">
+                   <div class="contact-tit"><strong>您常用的QQ是？（请填写）</strong></div>
+                   <div class="C_InputText">
+                       <input name="qq" type="text" id="qq">
+                       <div class="msg" style="display:none;">
+                          <p class="attention">填写正确</p>
+                       </div>
+                       <div class="msg" style="display:none;">
+                          <p class="error">您输入的号码不存在</p>
+                       </div>
+                   </div>
+               </dd>
+            </dl>
+            <dl class="contact-way bg clearfix">
+               <dt class="fl"><span class="icon p_icon"></span></dt>
+               <dd class="fl">
+                   <div class="contact-tit"><strong>您常用的联系电话是？（请填写）</strong></div>
+                   <div class="C_InputText">
+                       <input name="mobile" id="mobile" type="text">
+                       <div class="msg" style="display:none;">
+                          <p class="attention">填写正确</p>
+                       </div>
+                       <div class="msg" style="display:none;">
+                          <p class="error">您输入的号码格式不正确</p>
+                       </div>
+                   </div>
+               </dd>
+            </dl>
+            <dl class="contact-way clearfix">
+               <dt class="fl"><span class="icon e_icon"></span></dt>
+               <dd class="fl">
+                   <div class="contact-tit"><strong>您常用的电子邮箱是？（请填写）</strong></div>
+                   <div class="C_InputText">
+                       <input name="email" id="email" type="text">
+                       <div class="msg" style="display:none;">
+                          <p class="attention">填写正确</p>
+                       </div>
+                       <div class="msg" style="display:none;">
+                          <p class="error">您填写的邮件格式错误</p>
+                       </div>
+                   </div>
+               </dd>
+            </dl>
+        </div>
+        <div class="submitBtn">
+            <button name="#" type="submit">提交建议</button>
+        </div>
+        </form>
+    </div>
+</div>
+<!-- 底部 -->
+<div class="layout footer line_footer">
+    <p class="links">
+        <a href="http://www.ourbloom.com/aboutus/" target="_blank">关于我们</a>
+        |
+        <a href="http://www.ourbloom.com/aboutus/yingxiao/" target="_blank">广告服务</a>
+        |
+        <a href="http://www.ourbloom.com/aboutus/index.php?action=cooperation" target="_blank">商务合作</a>
+        |
+        <a href="http://www.ourbloom.com/aboutus/index.php?action=job" target="_blank">诚聘英才</a>
+        |
+        <a href="http://www.ourbloom.com/aboutus/index.php?action=contact" target="_blank">联系我们</a>
+        |
+        <a href="http://www.ourbloom.com/service/" target="_blank">帮助中心</a>
+        |
+        <a href="http://www.ourbloom.com/aboutus/index.php?action=agreement" target="_blank">使用协议</a>
+        |
+        <a href="http://www.ourbloom.com/aboutus/index.php?action=relief" target="_blank">免责条款</a>
+        |
+        <a href="http://www.ourbloom.com/aboutus/index.php?action=ditu" target="_blank">网站地图</a>
+        |
+        <a href="http://www.songhua.com/" target="_blank">去送花网买花</a>
+    </p>
+    <p class="tel">
+        客服电话：400-7171-500&nbsp;&nbsp;中国花协零售业分会会员单位&nbsp;&nbsp;日本JFTD中国区唯一合作伙伴
+    </p>
+    <p class="copyright">
+        <span>Copyright © 2011 花集网All Rights Reserved</span> 　
+        京ICP证 070655号<span class="ico ico_record"></span>
+    </p>
+</div>
+</body>
+</html>

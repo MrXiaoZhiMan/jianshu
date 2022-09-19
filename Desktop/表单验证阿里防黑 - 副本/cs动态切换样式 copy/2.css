@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.allPage {
+    width: 798px;
+    margin: 0 auto;
+}
+.navBg {
+    position: relative;
+    z-index: 2;
+    padding-top: 320px;
+    height: 36px;
+    line-height: 36px;
+    background: url(02/banner.jpg) no-repeat;
+}
+.navBg ul {
+    width: 574px;
+    height: 45px;
+    margin: 0 auto;
+    background: url(02/toplink.jpg);
+}
+.navBg ul li {
+    list-style: none;
+    float: left;
+    width: 95px;
+    text-align: center;
+}
+.navBg ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.bigRight {
+    background: url(02/content_bg.jpg) no-repeat;
+    margin-top: -36px;
+}
+.styleStatistics {
+    float: right;
+    width:163px ;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
